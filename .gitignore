@@ -1,0 +1,32 @@
+/.htaccess
+mysite/*.log
+_ss_environment.php
+sitemap.xml
+google*.html
+silverstripe-cache/
+vendor/
+assets/*
+_ss_environment.php
+*.sass-cache*
+/subsites/host-map.php
+
+# SILVERSTRIPE MODULES
+framework/
+cms/
+plato-welcome/
+gridfield-bulk-editing-tools/
+userforms/
+sortablegridfield/
+googlesitemaps/
+metatitle/
+betterbuttons/
+
+# OTHER
+Thumbs.db
+web.config
+.buildpath
+.project
+.settings
+.idea
+.DS_Store
+._.DS_Store

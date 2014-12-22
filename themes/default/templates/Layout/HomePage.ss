@@ -1,0 +1,4 @@
+<section>
+  $Content
+  $Form
+</section>

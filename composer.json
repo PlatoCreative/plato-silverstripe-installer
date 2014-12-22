@@ -1,0 +1,24 @@
+{
+    "require": {
+      "php": ">=5.3.2",
+      "silverstripe/cms": "3.1.*@dev",
+      "silverstripe/framework": "3.1.*@dev",
+      "plato-creative/plato-welcome": "dev-master",
+      "colymba/gridfield-bulk-editing-tools": "dev-master",
+      "silverstripe/userforms": "dev-master",
+      "undefinedoffset/sortablegridfield": "dev-master",
+      "silverstripe/googlesitemaps": "dev-master",
+      "kinglozzer/metatitle": "dev-master",
+      "unclecheese/betterbuttons": "dev-master"
+    },
+
+    "autoload": {
+      "psr-4": {
+        "PlatoCreative\\": "install/PlatoCreative"
+      }
+    },
+
+    "scripts": {
+      "post-install-cmd": "PlatoCreative\\Installer\\Install::postInstall"
+    }
+}

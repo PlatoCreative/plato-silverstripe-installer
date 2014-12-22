@@ -1,0 +1,13 @@
+---
+Name: mysite
+After:
+  0: 'framework/*'
+  1: 'cms/*'
+Database:
+#  host: default
+  name: default
+SSViewer:
+  theme: default
+SiteConfig:
+  extensions:
+    - CustomSiteConfig
