@@ -11,4 +11,5 @@ This script requires you have the following installed:
 ####What it does:####
 When `composer install` is executed composer loads the PlatoCreative installer class and works through it's logic.
 It firstly asks the user for some site settings e.g. theme name and then it will attempt to download and install the Foundation framework using a cli. 
+
 Once foundation is installed the script moves and renames a few folders and then compiles the Sass using `bundle exec compass watch` or if there no Gemfile then it will simply run `composer install`.
