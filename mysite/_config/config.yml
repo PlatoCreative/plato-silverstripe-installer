@@ -1,10 +1,10 @@
 ---
 Name: mysite
 After:
-  0: 'framework/*'
-  1: 'cms/*'
+  - 'framework/*'
+  - 'cms/*'
+---
 Database:
-#  host: default
   name: default
 SSViewer:
   theme: default
