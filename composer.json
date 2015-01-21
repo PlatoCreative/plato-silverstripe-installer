@@ -9,7 +9,9 @@
       "undefinedoffset/sortablegridfield": "dev-master",
       "silverstripe/googlesitemaps": "dev-master",
       "kinglozzer/metatitle": "dev-master",
-      "unclecheese/betterbuttons": "dev-master"
+      "unclecheese/betterbuttons": "dev-master",
+      "mediabeast/flat-admin": "dev-master",
+      "lekoala/silverstripe-mandrill": "dev-master",
     },
 
     "autoload": {
