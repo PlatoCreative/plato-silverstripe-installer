@@ -17,6 +17,8 @@ if( ! defined('SS_DATABASE_NAME')){
 // include configuration set in _ss_environment.php
 require_once('conf/ConfigureFromEnv.php');
 
+FulltextSearchable::enable(array('SiteTree'));
+
 // Spellcheck options (remove comments to enable)
 // HtmlEditorConfig::get('cms')->enablePlugins('spellchecker', 'contextmenu');
 // HtmlEditorConfig::get('cms')->addButtonsToLine(2, 'spellchecker');

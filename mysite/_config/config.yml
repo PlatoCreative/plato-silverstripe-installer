@@ -4,23 +4,15 @@ After:
   - 'framework/*'
   - 'cms/*'
 ---
-
 i18n:
   default_locale: en_NZ
-
 Database:
   name: default
 SSViewer:
   theme: default
-
-FulltextSearchable:
-  enable:
-    - SiteTree
-
 SiteConfig:
   extensions:
     - CustomSiteConfig
-
 LeftAndMain:
   extra_requirements_javascript:
     - mysite/javascript/MyLeftAndMain.Preview.js
