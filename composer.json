@@ -11,7 +11,7 @@
       "kinglozzer/metatitle": "dev-master",
       "unclecheese/betterbuttons": "dev-master",
       "mediabeast/flat-admin": "dev-master",
-      "lekoala/silverstripe-mandrill": "dev-master",
+      "lekoala/silverstripe-mandrill": "dev-master"
     },
 
     "autoload": {
