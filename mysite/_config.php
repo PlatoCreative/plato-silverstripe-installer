@@ -2,13 +2,6 @@
 // Get YML comfiguration settings
 $config = Config::inst();
 
-// check url path to determine if local/dev or live
-if( ! preg_match('/(\.localhost|\.local|\.dev|\.dev\.platocreative\.co\.nz)$/', $_SERVER['HTTP_HOST'])) {
-  define('SS_DATABASE_SERVER', 'localhost');
-} elseif( ! defined('SS_DATABASE_SERVER')) {
-  define('SS_DATABASE_SERVER', $config->get('Database', 'host'));
-}
-
 // use database name from config.yml unless defined in environment
 if( ! defined('SS_DATABASE_NAME')){
   define('SS_DATABASE_NAME', $config->get('Database', 'name'));
