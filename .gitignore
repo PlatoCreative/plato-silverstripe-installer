@@ -11,6 +11,7 @@ _ss_environment.php
 vendor/
 *.sass-cache*
 /subsites/host-map.php
+
 # OTHER
 Thumbs.db
 web.config
@@ -21,11 +22,12 @@ web.config
 .DS_Store
 ._.DS_Store
 
-# REQUIRED SILVERSTRIPE MODULES
+# SILVERSTRIPE MODULES
 cms
 framework
 plato-welcome
 gridfield-bulk-editing-tools
+gridfieldextensions
 userforms
 sortablegridfield
 googlesitemaps
@@ -40,3 +42,9 @@ omnipay
 sqlquerylist
 versioned-gridfield
 swipestripe
+blog
+lumberjack
+tagfield
+googlemapfield
+hasonefield
+listsorter
