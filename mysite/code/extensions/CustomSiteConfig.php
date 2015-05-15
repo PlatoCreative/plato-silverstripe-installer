@@ -18,8 +18,4 @@ class CustomSiteConfig extends DataExtension {
 		return $fields;
 	}
 
-	public function LatestBlogPosts($limit=1) {
-		return class_exists('BlogEntry') ? BlogEntry::get()->sort('Date DESC')->limit($limit) : null;
-	}
-
 }
