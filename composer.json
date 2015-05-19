@@ -1,8 +1,8 @@
 {
     "require": {
       "php": ">=5.3.2",
-      "silverstripe/cms": "3.1.10",
-      "silverstripe/framework": "3.1.10",
+      "silverstripe/cms": "3.1.*",
+      "silverstripe/framework": "3.1.*",
       "plato-creative/plato-welcome": "dev-master",
       "colymba/gridfield-bulk-editing-tools": "dev-master",
       "silverstripe/userforms": "dev-master",
