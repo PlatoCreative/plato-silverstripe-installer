@@ -39,6 +39,7 @@ class Page_Controller extends ContentController {
 			)
 		);
 		
+		Requirements::set_force_js_to_bottom(true);
 		// Requirements::customScript();
 
 	}
