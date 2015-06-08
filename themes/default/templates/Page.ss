@@ -30,19 +30,11 @@
 		<!-- End Google Tag Manager -->
 	<% end_if %>
 	
-  <header>
-    <nav>
-    <!-- menu -->
-    </nav>
-  </header>
+  <% include Header %>
   
   $Layout
   
-  <footer>
-    <p>
-      Website design by <a href="http://platocreative.co.nz">Plato Creative</a>
-    </p>
-  </footer>
+  <% include Footer %>
     
 </body>
 </html>
