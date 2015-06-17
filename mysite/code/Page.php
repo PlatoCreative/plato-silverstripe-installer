@@ -9,16 +9,16 @@ class Page extends SiteTree {
 
 	private static $has_many = array(
 	);
-		
+
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		return $fields;
 	}
-	
+
 }
 class Page_Controller extends ContentController {
-		
+
 	private static $allowed_actions = array (
 	);
 
@@ -27,7 +27,7 @@ class Page_Controller extends ContentController {
 
 		//Set a custom combined folder under themes so relative paths to images within CSS files don't break
 		Requirements::set_combined_files_folder($this->ThemeDir() . '/combined');
-		
+
 		// Javascript
 		Requirements::block(THIRDPARTY_DIR . '/jquery/jquery.js');
 		Requirements::combine_files(
@@ -38,10 +38,14 @@ class Page_Controller extends ContentController {
 				$this->ThemeDir() . '/js/app.js'
 			)
 		);
-		
+
 		Requirements::set_force_js_to_bottom(true);
 		// Requirements::customScript();
 
 	}
-	
+
+	public function IsLive() {
+		return Director::isLive();
+	}
+
 }
