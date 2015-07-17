@@ -7,10 +7,9 @@ silverstripe-cache/
 vendor/
 themes/simple
 assets/*
-_ss_environment.php
-vendor/
 *.sass-cache*
 /subsites/host-map.php
+install
 
 # OTHER
 Thumbs.db
