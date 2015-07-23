@@ -10,6 +10,7 @@ assets/*
 *.sass-cache*
 /subsites/host-map.php
 install
+/themes/*/combined
 
 # OTHER
 Thumbs.db
