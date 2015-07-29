@@ -273,13 +273,15 @@ class Install
   */
   public static function postInstall(Event $event)
   {
-
+    $io = $event->getIO();
+    
     // Check environment type
     if (self::getEnvironmentType() !== 'dev') {
+      $io->write('LIVE Environment detected, installer will not complete.');
+      $io->write('Ensure a _ss_environment.php file exists and is set to DEV.');
       exit;
     }
 
-    $io = $event->getIO();
     $basePath = self::getBasepath();
 
     // If the theme has already been renamed, assume this setup is complete
