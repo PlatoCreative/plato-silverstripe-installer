@@ -1,5 +1,5 @@
 {
-  "name": "PlatoCreative/plato-silverstripe-installer",
+  "name": "plato-creative/plato-silverstripe-installer",
   "description": "Custom built SilverStripe installer with Foundation.",
   "type": "silverstripe-module",
   "homepage": "https://github.com/PlatoCreative/plato-silverstripe-installer",
