@@ -1,27 +1,44 @@
 {
-    "require": {
-      "php": ">=5.3.2",
-      "silverstripe/cms": "3.1.*",
-      "silverstripe/framework": "3.1.*",
-      "plato-creative/plato-welcome": "dev-master",
-      "colymba/gridfield-bulk-editing-tools": "dev-master",
-      "silverstripe/userforms": "dev-master",
-      "undefinedoffset/sortablegridfield": "dev-master",
-      "silverstripe/googlesitemaps": "dev-master",
-      "kinglozzer/metatitle": "dev-master",
-      "unclecheese/betterbuttons": "dev-master",
-      "mediabeast/flat-admin": "dev-master",
-      "lekoala/silverstripe-mandrill": "dev-master",
-      "tractorcow/silverstripe-robots": "*@dev"
-    },
-
-    "autoload": {
-      "psr-4": {
-        "PlatoCreative\\": "install/PlatoCreative"
-      }
-    },
-
-    "scripts": {
-      "post-install-cmd": "PlatoCreative\\Installer\\Install::postInstall"
+  "name": "PlatoCreative/plato-silverstripe-installer",
+  "description": "Custom built SilverStripe installer with Foundation.",
+  "type": "silverstripe-module",
+  "homepage": "https://github.com/PlatoCreative/plato-silverstripe-installer",
+  "keywords": ["silverstripe", "installer", "plato", "creative", "foundation"],
+  "authors": [
+    {
+      "name": "Myles Beardsmore",
+      "email": "mediabeastnz@gmail.com",
+      "twitter": "mediabeastnz"
     }
+  ],
+  
+  "support": {
+    "issues": "https://github.com/PlatoCreative/plato-silverstripe-installer/issues"
+  },
+  
+  "require": {
+    "php": ">=5.3.2",
+    "silverstripe/cms": "3.1.*",
+    "silverstripe/framework": "3.1.*",
+    "plato-creative/plato-welcome": "dev-master",
+    "colymba/gridfield-bulk-editing-tools": "dev-master",
+    "silverstripe/userforms": "dev-master",
+    "undefinedoffset/sortablegridfield": "dev-master",
+    "silverstripe/googlesitemaps": "dev-master",
+    "kinglozzer/metatitle": "dev-master",
+    "unclecheese/betterbuttons": "dev-master",
+    "mediabeast/flat-admin": "dev-master",
+    "lekoala/silverstripe-mandrill": "dev-master",
+    "tractorcow/silverstripe-robots": "*@dev"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "PlatoCreative\\": "install/PlatoCreative"
+    }
+  },
+
+  "scripts": {
+    "post-install-cmd": "PlatoCreative\\Installer\\Install::postInstall"
+  }
 }
