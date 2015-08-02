@@ -11,7 +11,7 @@ assets/*
 /subsites/host-map.php
 install
 /themes/*/combined
-
+.vagrant
 # OTHER
 Thumbs.db
 web.config
