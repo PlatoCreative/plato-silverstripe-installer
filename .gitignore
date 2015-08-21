@@ -21,6 +21,7 @@ web.config
 .idea
 .DS_Store
 ._.DS_Store
+*.sublime-*
 
 # SILVERSTRIPE MODULES
 cms
