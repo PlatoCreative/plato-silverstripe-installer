@@ -31,7 +31,7 @@
     }
   },
   "scripts": {
-    "post-install-cmd": "PlatoCreative\\Installer\\Install::postInstall"
+    "post-install-cmd": "PlatoCreative\\Install::postInstall"
   },
   "prefer-stable": true,
 	"minimum-stability": "dev"

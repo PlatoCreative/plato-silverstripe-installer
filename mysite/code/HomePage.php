@@ -1,31 +1,26 @@
 <?php
-class HomePage extends Page {
+class HomePage extends Page
+{
 
-  private static $db = array(
-  );
+    private static $db = array();
 
-  private static $has_one = array(
-  );
+    private static $has_one = array();
 
-  private static $has_many = array(
-  );
-  
-  function getCMSFields() {
-    $fields = parent::getCMSFields();
+    private static $has_many = array();
 
-    return $fields;
-  }
-  
+    function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+        return $fields;
+    }
 }
 
-class HomePage_Controller extends Page_Controller {
-  
-  public function init(){
-    parent::init();
-    
-  }
-  
-  private static $allowed_actions = array (
-  );
+class HomePage_Controller extends Page_Controller
+{
+    private static $allowed_actions = array ();
 
+    public function init()
+    {
+        parent::init();
+    }
 }
