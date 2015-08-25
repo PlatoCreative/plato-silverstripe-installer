@@ -10,6 +10,7 @@ This script requires you have the following installed:
 ### Usage ###
 Use composer to quickly create a new project:
 - `composer create-project plato-creative/plato-silverstripe-installer . @dev`
+
 Once the porject is created run:
 - `composer install`
 
