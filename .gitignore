@@ -9,7 +9,7 @@ themes/simple
 assets/*
 *.sass-cache*
 /subsites/host-map.php
-#install
+install
 /themes/*/combined
 .vagrant
 # OTHER
