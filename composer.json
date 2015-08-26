@@ -16,7 +16,7 @@
     "silverstripe/framework": "3.1.*",
     "plato-creative/plato-welcome": "dev-master",
     "colymba/gridfield-bulk-editing-tools": "dev-master",
-    "silverstripe/userforms": "dev-master",
+    "silverstripe/userforms": "@stable",
     "undefinedoffset/sortablegridfield": "dev-master",
     "silverstripe/googlesitemaps": "dev-master",
     "kinglozzer/metatitle": "dev-master",
