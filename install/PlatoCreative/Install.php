@@ -1,5 +1,5 @@
 <?php
-namespace PlatoCreative\Installer;
+namespace PlatoCreative;
 
 use Composer\Script\Event;
 use Spyc;
