@@ -12,6 +12,8 @@ assets/*
 install
 /themes/*/combined
 .vagrant
+Vagrantfile
+bootstrap.sh
 # OTHER
 Thumbs.db
 web.config
