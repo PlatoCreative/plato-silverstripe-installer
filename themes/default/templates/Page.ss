@@ -14,7 +14,7 @@
   <% require themedCSS('typography') %>
 
   <%-- REMOVE BEFORE WEBSITE GOES LIVE --%>
-  <% if Not IsLive %><meta name="robots" content="noindex, nofollow"><% end_if %>
+  <% if not IsLive %><meta name="robots" content="noindex, nofollow"><% end_if %>
 
 </head>
 <body class="$ClassName">
