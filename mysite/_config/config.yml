@@ -18,6 +18,6 @@ LeftAndMain:
     - mysite/javascript/MyLeftAndMain.Preview.js
 MandrillMailer:
   subaccount: "accountname"
-StringField
+StringField:
   extensions:
     - CustomText
