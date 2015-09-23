@@ -96,14 +96,14 @@ class Install
   * @param  array $config
   * @return void
   */
-  protected static function applyConfiguration(array $config)
+  protected static function applyConfiguration(array $config, $themeName)
   {
     $base = self::getBasepath();
     include $base.'/framework/thirdparty/spyc/spyc.php';
 
     // Rename theme directory
     $themeBase = $base.'/themes/';
-    rename($themeBase.'default/', $themeBase.$config['theme'].'/');
+    rename($themeBase.$themeName.'/', $themeBase.$config['theme'].'/');
 
     // Update config.yml with user input
     $configPath = $base.'/mysite/_config/config.yml';
@@ -274,6 +274,19 @@ class Install
   public static function postInstall(Event $event)
   {
     $io = $event->getIO();
+    $basePath = self::getBasepath();
+
+    // theme name based on type e.g. BASE OR DEFAULT
+    $themeTypeName = "default";
+
+    if ($buildType = $io->ask('Is this a custom/bespoke build? Y or N: ')) {
+        $answerPool = array("y", "yes", "Yes", "yup", "yea", "Y");
+        if(in_array($buildType, $answerPool)){
+            // no need to rename theme type as it defaults to...default.
+        } else {
+            $themeTypeName = "base";
+        }
+    }
 
     // Check environment type
     if (self::getEnvironmentType() !== 'dev') {
@@ -285,7 +298,7 @@ class Install
     $basePath = self::getBasepath();
 
     // If the theme has already been renamed, assume this setup is complete
-    if (file_exists($basePath.'/themes/default')) {
+    if (file_exists("$basePath/themes/$themeTypeName")) {
 
       // Only try to rename things if the user actually provides some info
       if ($theme = $io->ask('Please specify the theme name: ')) {
@@ -294,7 +307,8 @@ class Install
           // 'sql-host' => $io->ask('Please specify the database host: '),
           'sql-name' => $io->ask('Please specify the database name: '),
         );
-        self::applyConfiguration($config);
+        // apply configuration based on above and theme type
+        self::applyConfiguration($config, $themeTypeName);
 
         $io->write('New configuration settings have been applied.');
         $io->write('Foundation will now be installed...');
@@ -310,7 +324,23 @@ class Install
         // run bundle and compass compile
         self::compileSass($config['theme']);
 
-        $io->write('Installation complete!!!');
+        $io->write('Installation complete. Any extra modules will now be required.');
+
+        // base on the answer above regarding build type remove and add a few things
+        if($themeTypeName == "default"){
+            // remove BASE theme as no longer required
+            if (file_exists($basePath.'/themes/base')) {
+                 self::rmdir_recursive($basePath.'/themes/base');
+            }
+        } else {
+            // add required BASE modules
+            // remove DEFAULT theme as this is no longer required
+            if (file_exists("$basePath/themes/default")) {
+                self::rmdir_recursive("$basePath/themes/default");
+            }
+            // this will prevent anything from being fired afterwards
+            echo shell_exec('cd ../../ && composer require plato-creative/plato-silverstripe-homeslides:dev-master plato-creative/plato-silverstripe-hometiles:dev-master plato-creative/plato-silverstripe-banners:dev-master plato-creative/plato-silverstripe-gallery:dev-master');
+        }
 
       }
 
