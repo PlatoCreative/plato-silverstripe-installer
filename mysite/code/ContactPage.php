@@ -15,7 +15,7 @@ class ContactPage extends UserDefinedForm {
         
         // Main Tab
         $fields->addFieldsToTab('Root.Main', array(
-            HTMLEditorField::create('ExtraContent', 'Extra Content')
+            HTMLEditorField::create('ExtraContent', 'Extra Content Area')
         ), 'Metadata');
         
         // Google Map
