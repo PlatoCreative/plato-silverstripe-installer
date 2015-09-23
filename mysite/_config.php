@@ -24,3 +24,5 @@ if (Director::isDev()) {
   // SSViewer::flush_template_cache();
   // Email::send_all_emails_to('?@platocreative.co.nz');
 }
+
+StringField::add_extension('CustomText');
