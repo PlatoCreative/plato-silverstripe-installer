@@ -311,15 +311,19 @@ class Install
         self::applyConfiguration($config, $themeTypeName);
 
         $io->write('New configuration settings have been applied.');
-        $io->write('Foundation will now be installed...');
+        if(in_array($buildType, $answerPool)){
+            $io->write('Foundation will now be installed...');
 
-        // install foundation
-        self::installFoundation($config['theme']);
+            // install foundation if not base build
+            self::installFoundation($config['theme']);
+        }
 
         // settings have been updated so it's time to tidy up what was downloaded from Foundation.
-        self::cleanUpFoundation($config['theme']);
-        $io->write('Foundation has been installed and the contents have been organised.');
-        $io->write('Bundle will now be run and then compass will compile the stylesheets...');
+        if(in_array($buildType, $answerPool)){
+            self::cleanUpFoundation($config['theme']);
+            $io->write('Foundation has been installed and the contents have been organised.');
+            $io->write('Bundle will now be run and then compass will compile the stylesheets...');
+        }
 
         // run bundle and compass compile
         self::compileSass($config['theme']);

@@ -1,0 +1,87 @@
+// Layout One
+.home-tiles-layout-one {
+    margin: 40px 0 40px;
+
+    .home-tile-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 15px;
+        max-height: 150px;
+        min-height: 150px;
+        width: 100%;
+    }
+
+    .home-tile {
+        text-align: left;
+
+        a {
+            background-color: #f1f1f1;
+            display: block;
+        }
+
+        p {
+            color: #333;
+            padding: rem-calc(0 20);
+        }
+
+        .title {
+            color: #333;
+            padding: rem-calc(0 20);
+        }
+    }
+
+    .home-tile-link {
+        background-color: #f1f1f1;
+        border: 1px solid #333;
+        display: inline-block;
+        margin-bottom: rem-calc(20);
+        padding: 10px 15px;
+        text-align: center;
+    }
+}
+
+// Layout Two
+.home-tiles-layout-two {
+    margin: 40px 0 40px;
+
+    a {
+        display: block;
+
+        &:hover {
+            .home-tile-content {
+                background-color: rgba(0, 0, 0, .5);
+            }
+        }
+    }
+
+    .home-tile-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        //min-height: rem-calc(200);
+        padding: rem-calc(0);
+    }
+
+    .home-tile-content {
+        background-color: rgba(0, 0, 0, .3);
+        padding: rem-calc(20);
+
+        .title {
+            color: $white;
+        }
+
+        p {
+            color: $white;
+        }
+
+        span {
+            display: inline-block;
+            color: $white;
+            padding: rem-calc(5 15);
+            border: 1px solid $white;
+        }
+    }
+
+
+}

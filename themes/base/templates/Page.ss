@@ -13,6 +13,9 @@
   <% require themedCSS('app') %>
   <% require themedCSS('typography') %>
 
+    <%-- FontAwesome --%>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
   <%-- REMOVE BEFORE WEBSITE GOES LIVE --%>
   <% if not IsLive %><meta name="robots" content="noindex, nofollow"><% end_if %>
 

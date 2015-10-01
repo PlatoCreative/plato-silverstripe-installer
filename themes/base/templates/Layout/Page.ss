@@ -1,4 +1,4 @@
-<% include Banner %>
+<% include InnerBanner %>
 
 <div class="row">
     <div class="large-12 medium-12 small-12 column">
@@ -8,4 +8,4 @@
     </div>
 </div>
 
-<% include GalleryLayout %>
+<% include Gallery %>

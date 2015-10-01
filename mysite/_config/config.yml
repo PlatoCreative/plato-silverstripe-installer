@@ -21,3 +21,14 @@ MandrillMailer:
 StringField:
   extensions:
     - CustomText
+Page:
+  BannerLayout: 1
+GalleryPage:
+  ItemLimit: 100
+  VideoAllowed: true
+HomePage:
+  SlideEffect: 'fade'
+  SlideSpeed: 500
+  SlideTimeout: 4000
+  HomeTilesLimit: 3
+  HomeTilesLayout: 2
