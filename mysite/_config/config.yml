@@ -21,6 +21,8 @@ MandrillMailer:
 StringField:
   extensions:
     - CustomText
+
+# Base install modules config
 Page:
   BannerLayout: 1
 GalleryPage:
