@@ -20,7 +20,7 @@
     "plato-creative/plato-userforms-extensions": "dev-master",
     "undefinedoffset/sortablegridfield": "dev-master",
     "silverstripe/googlesitemaps": "dev-master",
-    "kinglozzer/metatitle": "dev-master",
+    "kinglozzer/metatitle": "1.0.*",
     "unclecheese/betterbuttons": "1.2.*",
     "mediabeast/flat-admin": "dev-master",
     "lekoala/silverstripe-mandrill": "1.1.*",
