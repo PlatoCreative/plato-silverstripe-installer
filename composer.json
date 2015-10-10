@@ -21,7 +21,7 @@
     "undefinedoffset/sortablegridfield": "dev-master",
     "silverstripe/googlesitemaps": "dev-master",
     "kinglozzer/metatitle": "dev-master",
-    "unclecheese/betterbuttons": "dev-master",
+    "unclecheese/betterbuttons": "1.2.*",
     "mediabeast/flat-admin": "dev-master",
     "lekoala/silverstripe-mandrill": "1.1.*",
     "tractorcow/silverstripe-robots": "*@dev"
