@@ -28,11 +28,10 @@ web.config
 # SILVERSTRIPE MODULES
 cms
 framework
-plato-welcome
+plato-*
 gridfield-bulk-editing-tools
 gridfieldextensions
 userforms
-plato-userforms
 sortablegridfield
 googlesitemaps
 metatitle
