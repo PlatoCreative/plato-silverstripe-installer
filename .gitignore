@@ -1,6 +1,8 @@
 *
 !/.gitignore
+!/mysite
 !/mysite/*
+!/themes
 !/themes/*
 !/composer.json
 !/composer.lock
