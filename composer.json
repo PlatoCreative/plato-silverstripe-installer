@@ -23,6 +23,7 @@
     "plato-creative/plato-welcome": "dev-master",
     "colymba/gridfield-bulk-editing-tools": "dev-master",
     "silverstripe/userforms": "@stable",
+    "silverstripe/secureassets": "~1.0.4",
     "plato-creative/plato-userforms-extensions": "dev-master",
     "undefinedoffset/sortablegridfield": "dev-master",
     "silverstripe/googlesitemaps": "dev-master",
