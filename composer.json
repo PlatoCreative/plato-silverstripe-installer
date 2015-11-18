@@ -32,6 +32,7 @@
     "mediabeast/flat-admin": "dev-master",
     "lekoala/silverstripe-mandrill": "1.1.*",
     "tractorcow/silverstripe-robots": "*@dev",
+    "jonom/focuspoint": "dev-master",
     "plato-creative/plato-genericlogin" : "3.1.*"
   },
   "autoload": {
