@@ -20,3 +20,4 @@
 *.codekit*
 *.sublime-*
 *.sass-cache
+*prepros.cfg
