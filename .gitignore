@@ -17,6 +17,6 @@
 *.idea
 *.DS_Store
 *._.DS_Store
-*.codekit-cache
+*.codekit*
 *.sublime-*
 *.sass-cache
