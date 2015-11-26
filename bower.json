@@ -1,0 +1,7 @@
+{
+  "name": "plato-creative/plato-silverstripe-installer",
+  "dependencies": {
+    "foundation-sites": "6.0.4"
+  },
+  "directory": "vendor/"
+}
