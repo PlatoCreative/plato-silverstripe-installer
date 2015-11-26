@@ -3,15 +3,17 @@
 
 ### Requirements ###
 This script requires you have the following installed:
+- Composer
+- Bower
 - Compass
 - Foundation cli
 - Bundle
 
 ### Usage ###
 Use composer to quickly create a new project:
-- `composer create-project plato-creative/plato-silverstripe-installer . @dev`
+- `composer create-project plato-creative/plato-silverstripe-installer . 3.2.*`
 
-Once the porject is created run:
+Once the project is created run:
 - `composer install`
 
 ###Process:###
@@ -25,4 +27,3 @@ The base theme adds the following modules:
 - [Plato's Gallery module](https://github.com/PlatoCreative/plato-silverstripe-gallery)
 - [Plato's Banner module](https://github.com/PlatoCreative/plato-silverstripe-banners)
 - [Plato's Page section module](https://github.com/PlatoCreative/plato-silverstripe-sections)
-
