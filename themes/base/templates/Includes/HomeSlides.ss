@@ -21,11 +21,7 @@
                     <div class="large-12 large-centered column">
                         <h1>{$Title}</h1>
                         <p>{$Content}</p>
-                        <% if LinkTo && LinkTitle %>
-                        <a href="$LinkTo.Link">{$LinkTitle}</a>
-                        <% else_if ExternalLinkURL && LinkTitle %>
-                        <a href="$ExternalLinkURL" target="_blank">{$LinkTitle}</a>
-                        <% end_if %>
+                        {$Link}
                     </div>
                 </div>
             </div>
