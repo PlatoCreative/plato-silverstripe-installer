@@ -2,14 +2,15 @@
 A custom installer for a SilverStripe based project, includes commonly used files and settings.
 
 ### Requirements ###
-This script requires you have the following installed:
+This installer requires you have the following:
 - Composer
 - Bower
 - Compass
-- Foundation cli
+
+### Recommended ###
 - Bundle
 
-### Installion ###
+### Installation ###
 Use composer to quickly create a new project:
 ```
 composer create-project plato-creative/plato-silverstripe-installer . 3.2.*
