@@ -1,14 +1,14 @@
 @import 'settings';
-@import 'foundation';
+@import 'foundation-sites/scss/foundation';
 
 // Plugins
-@import '../js/fancybox/source/jquery.fancybox.css'; // fancybox
+@import 'fancybox/source/jquery.fancybox.css'; // fancybox
 
 // Layout
-@import 'footer';
-
-// Modules
-@import 'module-banners'; // banner module
-@import 'module-gallery'; // banner gallery
-@import 'module-homeslides'; // banner home slides
-@import 'module-hometiles'; // banner home tiles
+// @import 'footer';
+//
+// // Modules
+// @import 'module-banners'; // banner module
+// @import 'module-gallery'; // banner gallery
+// @import 'module-homeslides'; // banner home slides
+// @import 'module-hometiles'; // banner home tiles

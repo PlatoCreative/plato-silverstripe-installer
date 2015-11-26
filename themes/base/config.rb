@@ -1,5 +1,5 @@
 # Require any additional compass plugins here.
-add_import_path "foundation/scss"
+add_import_path "../../vendor/"
 http_path = "/"
 css_dir = "css"
 sass_dir = "scss"
