@@ -1,0 +1,24 @@
+/*
+  breadcrumbs
+  ----------
+  This file should contain base styling for breadcrumbs.
+  This means padding, link colors and hovers effects.
+  NO Layout styles at this stage.
+*/
+
+.breadcrumb{
+  a{
+    display: inline;
+  }
+  .item{
+    display: inline-block;
+    &:after{
+      content: '/';
+      display: inline-block;
+      padding: 0 rem-calc(15px);
+    }
+    &.last:after{
+      display: none;
+    }
+  }
+}

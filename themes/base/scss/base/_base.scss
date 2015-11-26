@@ -1,0 +1,356 @@
+/*
+Base Elements
+------------
+This file should contain base elements such as form, label, inputs or buttons.
+They also include more abstract elements like color palettes, fonts, and animations.
+Base elements are abstract and aren't often terribly useful on their own,
+but they provide a useful reference and allow you to see all your
+global styles laid out at a glance.
+*/
+
+*:focus{
+  outline: none;
+}
+
+main{
+  display: block;
+}
+
+// --------------- animations ---------------
+
+$fast-animation: .5s ease-in;
+$animation: 1s ease;
+$slow-animation: 2s ease;
+
+// --------------- visibility ---------------
+
+// --------------- headings ---------------
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+// --------------- paragraph ---------------
+p {
+
+}
+
+// --------------- blockquote ---------------
+blockquote {
+
+}
+
+// --------------- citation ---------------
+cite {
+
+}
+
+// --------------- inline elements ---------------
+a {
+
+}
+
+b,
+strong {
+
+}
+
+i,
+em {
+
+}
+
+
+u {
+
+}
+
+del {
+
+}
+
+ins {
+
+}
+
+s {
+
+}
+
+sup {
+
+}
+
+sub {
+
+}
+
+small {
+
+}
+
+abbr {
+
+}
+
+kbd {
+
+}
+
+q {
+
+}
+
+code {
+
+}
+
+samp {
+
+}
+
+var {
+
+}
+
+// --------------- Time ---------------
+time {
+
+}
+
+// --------------- preformatted text ---------------
+pre {
+
+}
+
+// --------------- Hr ---------------
+hr {
+
+}
+
+// --------------- unordered list ---------------
+ul {
+
+}
+
+// --------------- ordered list ---------------
+ol {
+
+}
+
+// --------------- definition ---------------
+dl {
+
+}
+
+dt {
+
+}
+
+dd {
+
+}
+
+// --------------- logo ---------------
+
+.siteName {
+
+}
+
+// --------------- tagline ---------------
+
+.siteTagline{
+
+}
+// --------------- icons ---------------
+
+%icon {
+
+}
+
+// --------------- inputs ---------------
+// --------------- text ---------------
+input.text,
+input[type=text] {
+
+}
+
+// --------------- textarea ---------------
+textarea {
+
+}
+
+// --------------- email ---------------
+input.email,
+input[type=email] {
+
+}
+
+// --------------- password ---------------
+input.password,
+input[type=password] {
+
+}
+
+// --------------- web site  address ---------------
+input.url,
+input[type=url] {
+
+}
+
+// --------------- search ---------------
+input.search,
+input[type=search] {
+
+}
+
+// --------------- select menu ---------------
+input.text,
+input[type=text] {
+
+}
+// --------------- checkbox ---------------
+input.text,
+input[type=text] {
+
+}
+// --------------- radio ---------------
+input.text,
+input[type=text] {
+
+}
+// --------------- color ---------------
+input.text,
+input[type=text] {
+
+}
+// --------------- number ---------------
+input.number,
+input[type=number] {
+
+}
+// --------------- range ---------------
+input.range,
+input[type=range] {
+
+}
+// --------------- date ---------------
+input.date,
+input[type=date] {
+
+}
+// --------------- month ---------------
+input.month,
+input[type=month] {
+
+}
+// --------------- week ---------------
+input.week,
+input[type=week] {
+
+}
+// --------------- datetime ---------------
+input.datetime,
+input[type=datetime] ,
+input.datetime-local,
+input[type=datetime-local] {
+
+}
+
+// --------------- required ---------------
+.requiredField>label{
+  &:after{
+    content: ' *';
+    color: $alert-color;
+  }
+}
+
+// --------------- errors ---------------
+
+span.error,
+small.error{
+
+}
+// --------------- buttons ---------------
+.btn,
+.button,
+input.submit,
+input[type=submit] {
+  @extend button;
+}
+
+// --------------- search buttons ---------------
+
+button[value=Search]{
+
+}
+
+// --------------- field wrapper ---------------
+
+.field{
+
+}
+
+// --------------- table ---------------
+table {
+
+}
+
+tr {
+
+}
+
+td {
+
+}
+
+th {
+
+}
+
+thead {
+
+}
+
+tbody {
+
+}
+
+tfoot {
+
+}
+
+// --------------- address ---------------
+address {
+
+}
+// --------------- images ---------------
+img{
+
+}
+
+// --------------- links ---------------
+
+a{
+
+}

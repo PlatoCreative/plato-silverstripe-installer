@@ -1,14 +1,4 @@
-@import 'settings';
-@import 'foundation-sites/scss/foundation';
-
-// Plugins
-@import 'fancybox/source/jquery.fancybox.css'; // fancybox
-
-// Layout
-// @import 'footer';
-//
-// // Modules
-// @import 'module-banners'; // banner module
-// @import 'module-gallery'; // banner gallery
-// @import 'module-homeslides'; // banner home slides
-// @import 'module-hometiles'; // banner home tiles
+@import "settings";
+@import "foundation-sites/scss/foundation";
+@import "base";
+@import "layout";
