@@ -71,7 +71,8 @@ $rem-base: 16px;
 // --------------
 
 $breakpoints: (
-  small: 0,
+  tiny: 0,
+  small: 320px,
   medium: 640px,
   large: 1024px,
   xlarge: 1200px,
