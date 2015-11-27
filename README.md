@@ -19,9 +19,9 @@ When `composer install` is executed composer loads the PlatoCreative installer c
 It firstly asks the user for some site settings e.g. theme name and database name.
 It then asks if you are building a custom website or want to base it from a pre-build theme and modules. If you choose to use the base then you will get some basic styles and layout and a few pre-built modules. If you choose custom then you will get a fresh foundation install and limited setup.
 
-The base theme adds the following modules:
-- [Plato's Home page slides module](https://github.com/PlatoCreative/plato-silverstripe-homeslides)
-- [Plato's Home page tiles module](https://github.com/PlatoCreative/plato-silverstripe-hometiles)
-- [Plato's Gallery module](https://github.com/PlatoCreative/plato-silverstripe-gallery)
-- [Plato's Banner module](https://github.com/PlatoCreative/plato-silverstripe-banners)
-- [Plato's Page section module](https://github.com/PlatoCreative/plato-silverstripe-sections)
+The base theme adds the following plato modules:
+- [Home page slides](https://github.com/PlatoCreative/plato-silverstripe-homeslides)
+- [Home page tiles](https://github.com/PlatoCreative/plato-silverstripe-hometiles)
+- [Gallery](https://github.com/PlatoCreative/plato-silverstripe-gallery)
+- [Banner](https://github.com/PlatoCreative/plato-silverstripe-banners)
+- [Page section](https://github.com/PlatoCreative/plato-silverstripe-sections)
