@@ -1,7 +1,8 @@
 <?php
-class CustomLink extends DataExtension{
+class CustomLink extends DataExtension
+{
 	private static $db = array(
-        'FontAwesomeIcon' => 'varchar',
+        'FAIcon' => 'varchar',
 		'TrackingID' => 'varchar'
     );
 
@@ -18,13 +19,18 @@ class CustomLink extends DataExtension{
         return $fields;
     }
 
-	public function getIcon() {
-		$icon = $this->owner->FontAwesomeIcon ? Convert::raw2att( $this->owner->FontAwesomeIcon ) : '';
+	public function getIcon()
+	{
+		$icon = $this->owner->FAIcon ? Convert::raw2att( $this->owner->FAIcon ) : '';
 		return $icon ? "<i class='fa $icon'></i>" : '';
 	}
 
-	public function getIDAttr() {
-		$id = $this->owner->TrackingID ? str_replace(' ','_',Convert::raw2att( $this->owner->TrackingID )) : '';
+	public function getIDAttr()
+	{
+		$id = '';
+		if($this->owner->TrackingID){
+			$id = Convert::raw2att(str_replace(' ','_',$this->owner->TrackingID));
+		}
 		return $id ? " id='fa $id'" : '';
 	}
 
