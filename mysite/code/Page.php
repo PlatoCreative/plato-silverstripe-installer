@@ -31,15 +31,20 @@ class Page_Controller extends ContentController
             array(
                 'vendor/jquery/dist/jquery.min.js',
                 'vendor/foundation-sites/js/foundation.min.js',
-                'vendor/js/app.js'
+                'vendor/cycle2/jquery.cycle2.min.js',
+                'vendor/cycle2/jquery.cycle2.swipe.min.js',
+                "$ThemeDir/js/app.js"
             )
         );
 
-        if(class_exists('HomeSlide') || class_exists('GalleryItem')) {
-            Requirements::javascript('vendor/cycle2/jquery.cycle2.min.js');
-            Requirements::javascript('vendor/cycle2/jquery.cycle2.swipe.min.js');
-            Requirements::javascript('vendor/fancybox/source/jquery.fancybox.pack.js');
-            Requirements::javascript('vendor/fancybox/source/helpers/jquery.fancybox-media.js');
+        if(class_exists('GalleryItem')) {
+            Requirements::combine_files(
+                'fancybox.js',
+                array(
+                    'vendor/fancybox/source/jquery.fancybox.pack.js',
+                    'vendor/fancybox/source/helpers/jquery.fancybox-media.js'
+                )
+            );
         }
 
         // Requirements::customScript();
