@@ -1,5 +1,6 @@
 <?php
-class ContactPage extends UserDefinedForm {
+class ContactPage extends UserDefinedForm
+{
 
     private static $icon = 'mysite/images/contact.png';
 
@@ -12,20 +13,20 @@ class ContactPage extends UserDefinedForm {
 
     function getCMSFields() {
         $fields = parent::getCMSFields();
-        
+
         // Main Tab
         $fields->addFieldsToTab('Root.Main', array(
             HTMLEditorField::create('ExtraContent', 'Extra Content Area')
         ), 'Metadata');
-        
+
         // Google Map
 	$fields->addFieldsToTab('Root.GoogleMap', array(
 		TextField::create('GoogleMap', 'Google Map URL')
 	));
-        
+
         return $fields;
     }
-    
+
     // Google Map
     public function LatLong() {
        $ll = preg_match('/\@([-.0-9]+),([-.0-9]+)/', $this->GoogleMap, $matches);
@@ -33,7 +34,8 @@ class ContactPage extends UserDefinedForm {
     }
 }
 
-class ContactPage_Controller extends UserDefinedForm_Controller {
+class ContactPage_Controller extends UserDefinedForm_Controller
+{
     private static $allowed_actions = array ();
 
     public function init() {
