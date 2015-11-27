@@ -43,8 +43,8 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "PlatoCreative\\Install::postInstall",
-      "bower install"
+      "bower install",
+      "PlatoCreative\\Install::postInstall"
     ],
     "post-update-cmd": [
       "bower install"

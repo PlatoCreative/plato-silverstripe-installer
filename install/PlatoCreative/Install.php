@@ -85,7 +85,9 @@ class Install
     public static function postInstall(Event $event)
     {
         $io = $event->getIO();
-        $basePath = self::getBasepath();
+        $basePath = (string) self::getBasepath();
+        $baseName = end((explode('/',$basePath)));
+        $baseName = explode('.',$baseName)[0];
         include $basePath.'/framework/thirdparty/spyc/spyc.php';
         $configPath = $basePath.'/mysite/_config/config.yml';
 
@@ -96,8 +98,9 @@ class Install
             exit;
         }
 
+        // If BuildType exists don't run this script
         if(isset($config['BuildType'])){
-            exit; // If BuildType exists don't run this script
+            exit;
         }
 
         // Check environment type
@@ -121,17 +124,19 @@ class Install
         // If the theme has already been renamed, assume this setup is complete
         if (file_exists($baseTheme)) {
             // Only try to rename things if the user actually provides some info
-            $ThemeName = $config['SSViewer']['theme'];
-            if ($ThemeName = $io->ask("Please specify the theme name [$ThemeName]: ")) {
+            if ($ThemeName = $io->ask("Please specify the theme name [$baseName]: ")) {
                 $config['SSViewer']['theme'] = $ThemeName;
+            }else{
+                $config['SSViewer']['theme'] = $baseName;
             }
-
             rename($baseTheme, $themesDir.$config['SSViewer']['theme']);
         }
 
-        $DatebaseName = $config['Database']['name'];
-        if ($DatebaseName = $io->ask("Please specify the database name [$DatebaseName]: ")) {
+        $DefaultDatebaseName = 'ss_'.$baseName;
+        if ($DatebaseName = $io->ask("Please specify the database name [$DefaultDatebaseName]: ")) {
             $config['Database']['name'] = $DatebaseName;
+        }else{
+            $config['Database']['name'] = $DefaultDatebaseName;
         }
 
         // apply configuration to yaml
