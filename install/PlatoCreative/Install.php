@@ -88,6 +88,7 @@ class Install
         $basePath = self::getBasepath();
         include $basePath.'/framework/thirdparty/spyc/spyc.php';
         $configPath = $basePath.'/mysite/_config/config.yml';
+
         if (file_exists($configPath)) {
             $config = Spyc::YAMLLoad(file_get_contents($configPath));
         }else{
@@ -133,15 +134,14 @@ class Install
             $config['Database']['name'] = $DatebaseName;
         }
 
-        // apply configuration based on above and theme type
-        // self::applyConfiguration($config);
+        // apply configuration to yaml
         $yaml = Spyc::YAMLDump($config);
         if(!file_put_contents($configPath, $yaml)){
             $io->write('Failed to write config file.  Check your folder/file permissions.');
             exit;
         }
 
-        echo shell_exec('cd ../../ && php framework/cli-script.php dev/build');
+        // echo shell_exec('cd ../../ && php framework/cli-script.php dev/build');
         $io->write('Plato installer complete.');
     }
 
@@ -153,7 +153,7 @@ class Install
     public static function postUpdate(Event $event)
     {
         $io = $event->getIO();
-        echo shell_exec('cd ../../ && php framework/cli-script.php dev/build');
+        // echo shell_exec('cd ../../ && php framework/cli-script.php dev/build');
         $io->write("postUpdate event triggered.");
     }
 
