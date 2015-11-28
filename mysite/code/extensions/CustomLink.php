@@ -11,8 +11,14 @@ class CustomLink extends DataExtension
         $fields->addFieldsToTab(
 			'Root.Main',
 			array(
-	            FontAwesomeIconPickerField::create('FontAwesomeIcon', 'Font Awesome Icon'),
-				TextField::create('TrackingID','Tracking ID')
+	            FontAwesomeIconPickerField::create(
+					'FAIcon',
+					'Icon'
+				),
+				TextField::create(
+					'TrackingID',
+					'Tracking ID'
+				)
 	        ),
 			'OpenInNewWindow'
 		);
@@ -25,13 +31,23 @@ class CustomLink extends DataExtension
 		return $icon ? "<i class='fa $icon'></i>" : '';
 	}
 
-	public function getIDAttr()
+	public function getTrackingAttr()
 	{
-		$id = '';
+		$attr = '';
+		$siteConfig = SiteConfig::current_site_config();
+
 		if($this->owner->TrackingID){
-			$id = Convert::raw2att(str_replace(' ','_',$this->owner->TrackingID));
+			if(isset($siteConfig->GoogleTagManager)){
+				$id = Convert::raw2att(str_replace(' ','_',$this->owner->TrackingID));
+				$attr .= " id='fa $id' ";
+			}
+			if(isset($siteConfig->GoogleAnaltyicsID)){
+				$track = Convert::raw2att($this->owner->TrackingID);
+				$attr .= " data-ga-label='$track' ";
+			}
 		}
-		return $id ? " id='fa $id'" : '';
+
+		return $attr;
 	}
 
 	public function updateLinkTemplate($l, &$link)
@@ -41,8 +57,8 @@ class CustomLink extends DataExtension
 			$target = $l->getTargetAttr();
 			$class = $l->getClassAttr();
 			$icon = $l->getIcon();
-			$id = $l->getIDAttr();
-			$link = "<a href='$url' $target $class $id>{$icon}$title</a>";
+			$tracking = $l->getTrackingAttr();
+			$link = "<a href='$url' $target $class $tracking>{$icon}$title</a>";
 			return $link;
 		}
 	}
