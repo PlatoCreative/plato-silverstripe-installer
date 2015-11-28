@@ -29,11 +29,11 @@ class Page_Controller extends ContentController
         Requirements::combine_files(
             'app.js',
             array(
-                'vendor/jquery/dist/jquery.min.js',
-                'vendor/foundation-sites/js/foundation.min.js',
-                'vendor/cycle2/jquery.cycle2.min.js',
-                'vendor/cycle2/jquery.cycle2.swipe.min.js',
-                "$ThemeDir/js/app.js"
+                'thirdparty/jquery/dist/jquery.min.js',
+                'thirdparty/foundation-sites/js/foundation.min.js',
+                'thirdparty/jquery-cycle2/build/jquery.cycle2.min.js',
+                'thirdparty/jquery-cycle2/build/plugin/jquery.cycle2.swipe.min.js',
+                $this->ThemeDir().'/js/app.js'
             )
         );
 
@@ -41,8 +41,8 @@ class Page_Controller extends ContentController
             Requirements::combine_files(
                 'fancybox.js',
                 array(
-                    'vendor/fancybox/source/jquery.fancybox.pack.js',
-                    'vendor/fancybox/source/helpers/jquery.fancybox-media.js'
+                    '/thirdparty/fancybox/source/jquery.fancybox.pack.js',
+                    '/thirdparty/fancybox/source/helpers/jquery.fancybox-media.js'
                 )
             );
         }
