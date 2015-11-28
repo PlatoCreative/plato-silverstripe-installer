@@ -3,7 +3,7 @@
         <div class="large-4 medium-6 small-12 column">
             <ul>
                 <% with SiteConfig %>
-                <% if Phone %><li><a href="tel:{$Phone}"><i class="fa fa-phone fa-fw"></i> {$Phone}</a></li><% end_if %>
+                <% if Phone %><li><a href="tel:{$Phone.PhoneFriendly}"><i class="fa fa-phone fa-fw"></i> {$Phone}</a></li><% end_if %>
                 <% if Mobile %><li><a href="tel:{$Mobile}"><i class="fa fa-mobile fa-fw"></i> {$Mobile}</a></li><% end_if %>
                 <% if FreePhone %><li><a href="tel:{$FreePhone.PhoneFriendly}"><i class="fa fa-phone fa-fw"></i> {$FreePhone}</a></li><% end_if %>
                 <% if PhysicalAddress %><li><a href="map:{$PhysicalAddress}"><i class="fa fa-map-marker fa-fw"></i> {$PhysicalAddress}</a></li><% end_if %>
