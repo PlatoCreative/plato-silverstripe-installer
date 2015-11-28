@@ -1,9 +1,8 @@
 ---
 Name: mysite
 After:
-  - 'framework/*'
-  - 'cms/*'
----
+  0: 'framework/*'
+  1: 'cms/*'
 i18n:
   default_locale: en_NZ
 Database:
@@ -12,11 +11,14 @@ SSViewer:
   theme: default
 SiteConfig:
   extensions:
-    - CustomSiteConfig
-    - GoogleConfig
+    0: CustomSiteConfig
+    1: GoogleConfig
+    3: AppearanceConfig
 LeftAndMain:
   extra_requirements_javascript:
     - mysite/javascript/MyLeftAndMain.Preview.js
+    - >
+      mysite/javascript/MyLeftAndMain.Preview.js
 MandrillMailer:
   subaccount: "accountname"
 StringField:
