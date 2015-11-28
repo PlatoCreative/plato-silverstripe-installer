@@ -30,7 +30,7 @@ class Page_Controller extends ContentController
             'app.js',
             array(
                 'thirdparty/jquery/dist/jquery.min.js',
-                'thirdparty/foundation-sites/js/foundation.min.js',
+                'thirdparty/foundation-sites/dist/foundation.min.js',
                 'thirdparty/jquery-cycle2/build/jquery.cycle2.min.js',
                 'thirdparty/jquery-cycle2/build/plugin/jquery.cycle2.swipe.min.js',
                 $this->ThemeDir().'/js/app.js'
