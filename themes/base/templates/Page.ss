@@ -17,10 +17,10 @@
 
     <%-- REMOVE BEFORE WEBSITE GOES LIVE --%>
     <% if not IsLive %><meta name="robots" content="noindex, nofollow"><% end_if %>
-
+    <% include GoogleAnalytics trackingId=$SiteConfig.GoogleAnaltyicsID %>
 </head>
 <body class="$ClassName">
-    <% include GoogleTracking trackingId=$SiteConfig.GoogleTagManager %>
+    <% include GoogleTagManager trackingId=$SiteConfig.GoogleTagManager %>
     <% include Header %>
     $Layout
     <% include Footer %>
