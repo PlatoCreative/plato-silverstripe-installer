@@ -16,7 +16,6 @@ SiteConfig:
     3: AppearanceConfig
 LeftAndMain:
   extra_requirements_javascript:
-    - mysite/javascript/MyLeftAndMain.Preview.js
     - >
       mysite/javascript/MyLeftAndMain.Preview.js
 MandrillMailer:
