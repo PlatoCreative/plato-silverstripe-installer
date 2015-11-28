@@ -11,11 +11,11 @@ class GoogleConfig extends DataExtension
         $fields->addFieldsToTab('Root.Tracking', array(
             TextField::create(
                 'GoogleTagManager',
-                'Enter the tag manager ID'
+                'Tag manager ID'
             )->setAttribute("placeholder", "GTM-******"),
             TextField::create(
                 'GoogleAnaltyicsID',
-                'Enter the analytics ID'
+                'Analytics ID'
             )->setAttribute("placeholder", "UA-******-*"),
         ));
 
