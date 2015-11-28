@@ -13,6 +13,7 @@ SSViewer:
 SiteConfig:
   extensions:
     - CustomSiteConfig
+    - GoogleConfig
 LeftAndMain:
   extra_requirements_javascript:
     - mysite/javascript/MyLeftAndMain.Preview.js
