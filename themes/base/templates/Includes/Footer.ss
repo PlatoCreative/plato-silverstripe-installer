@@ -23,11 +23,11 @@
         </div>
     </div>
 </footer>
-<footer class="footer copyright">
+<footer class="footer contentInfo" role="contentInfo">
     <div class="row">
         <div class="text-center column">
-            <small>&copy; Copyright $SiteConfig.Title $Now.Year</small>
-            <small>Website design by <a href="http://platocreative.co.nz" target="_blank">Plato Creative</a></small>
+            <small class="copyright" rel="license">&copy; Copyright $SiteConfig.Title $Now.Year</small>
+            <small class="createdBy">Website design by <a href="http://platocreative.co.nz" target="_blank">Plato Creative</a></small>
         </div>
     </div>
 </footer>
