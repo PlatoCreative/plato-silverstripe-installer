@@ -2,13 +2,6 @@
 class CustomSiteConfig extends DataExtension
 {
     private static $db = array(
-        'Email' => 'Varchar(255)',
-        'Phone' => 'Varchar(255)',
-        'FreePhone' => 'Varchar(255)',
-        'Mobile' => 'Varchar(255)',
-        'Fax' => 'Varchar(255)',
-        'PostalAddress' => 'Text',
-        'PhysicalAddress' => 'Text',
         'FacebookURL' => 'Varchar(255)',
         'TwitterURL' => 'Varchar(255)',
         'PinterestURL' => 'Varchar(255)',
@@ -26,26 +19,6 @@ class CustomSiteConfig extends DataExtension
         // $fields->removeByName('Theme');
 
         $fields->addFieldsToTab('Root.Main', array(
-            TextField::create(
-                'Email',
-                'Email Address'
-            )->setAttribute("placeholder", "email@domain.com"),
-            TextField::create(
-                'Phone',
-                'Phone Number'
-            ),
-            TextField::create(
-                'FreePhone',
-                'Free Phone Number'
-            ),
-            TextField::create(
-                'Mobile',
-                'Mobile Number'
-            ),
-            TextField::create(
-                'Fax',
-                'Fax Number'
-            ),
             TextField::create(
                 'FacebookURL',
                 'Facebook URL'
@@ -68,14 +41,6 @@ class CustomSiteConfig extends DataExtension
                 'YoutubeURL',
                 'Youtube URL'
             )->setAttribute("placeholder", "http://www.youtube.com"),
-            TextareaField::create(
-                'PostalAddress',
-                'Postal Address'
-            )->setRows(4),
-            TextareaField::create(
-                'PhysicalAddress',
-                'Physical Address'
-            )->setRows(4)
         ));
 
         return $fields;
