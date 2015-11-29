@@ -1,11 +1,9 @@
 <footer class="footer">
     <div class="row">
         <div class="large-4 medium-6 column">
-            <ul>
+            <% include Phone Numbers=$SiteConfig.Phones %>
+            <ul>                
                 <% with SiteConfig %>
-                <% if Phone %><li><a href="tel:{$Phone.PhoneFriendly}"><i class="fa fa-phone fa-fw"></i> {$Phone}</a></li><% end_if %>
-                <% if Mobile %><li><a href="tel:{$Mobile}"><i class="fa fa-mobile fa-fw"></i> {$Mobile}</a></li><% end_if %>
-                <% if FreePhone %><li><a href="tel:{$FreePhone.PhoneFriendly}"><i class="fa fa-phone fa-fw"></i> {$FreePhone}</a></li><% end_if %>
                 <% if PhysicalAddress %><li><a href="map:{$PhysicalAddress}"><i class="fa fa-map-marker fa-fw"></i> {$PhysicalAddress}</a></li><% end_if %>
                 <% if PostalAddress %><li><a href="javascript:;"><i class="fa fa-envelope fa-fw"></i> {$PostalAddress}</a></li><% end_if %>
                 <% end_with %>
