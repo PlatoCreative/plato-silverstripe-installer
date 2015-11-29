@@ -2,28 +2,28 @@
 class CustomLink extends DataExtension
 {
 	private static $db = array(
-        'FAIcon' => 'varchar',
+		'FAIcon' => 'varchar',
 		'TrackingID' => 'varchar'
-    );
+	);
 
 	public function updateCMSFields(FieldList $fields)
 	{
-        $fields->addFieldsToTab(
+		$fields->addFieldsToTab(
 			'Root.Main',
 			array(
-	            FontAwesomeIconPickerField::create(
-					'FAIcon',
-					'Icon'
-				),
-				TextField::create(
-					'TrackingID',
-					'Tracking ID'
+				FontAwesomeIconPickerField::create(
+				'FAIcon',
+				'Icon'
+			),
+			TextField::create(
+				'TrackingID',
+				'Tracking ID'
 				)
-	        ),
+			),
 			'OpenInNewWindow'
 		);
-        return $fields;
-    }
+		return $fields;
+	}
 
 	public function getIcon()
 	{
@@ -46,7 +46,6 @@ class CustomLink extends DataExtension
 				$attr .= " data-ga-label='$track' ";
 			}
 		}
-
 		return $attr;
 	}
 

@@ -8,7 +8,7 @@ class TrackingConfig extends DataExtension
     );
 
     public function updateCMSFields(FieldList $fields)
-	{
+    {
         $fields->addFieldsToTab('Root.Tracking.Google', array(
             TextField::create(
                 'GoogleTagManager',

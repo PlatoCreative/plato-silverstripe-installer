@@ -2,20 +2,20 @@
 class CustomText extends DataExtension
 {
 	/**
-	  * Removes spaces from this StringField.
-	  *
-	  * @return string
-	  */
+	* Removes spaces from this StringField.
+	*
+	* @return string
+	*/
 	public function NoSpaces()
 	{
 		return str_replace(' ', '', $this->owner->value);
 	}
 
 	/**
-	  * Provides string replace on StringField
-	  *
-	  * @return string
-	  */
+	* Provides string replace on StringField
+	*
+	* @return string
+	*/
 	public function StrReplace($search = ' ', $replace = '')
 	{
 		return str_replace($search, $replace, $this->owner->value);
