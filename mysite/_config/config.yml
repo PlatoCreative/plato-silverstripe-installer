@@ -12,7 +12,7 @@ SSViewer:
 SiteConfig:
   extensions:
     0: CustomSiteConfig
-    1: GoogleConfig
+    1: TrackingConfig
     3: AppearanceConfig
 LeftAndMain:
   extra_requirements_javascript:
