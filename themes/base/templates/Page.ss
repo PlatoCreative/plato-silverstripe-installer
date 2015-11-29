@@ -24,5 +24,6 @@
     <% include Header %>
     $Layout
     <% include Footer %>
+    <% include CrazyEgg trackingId=$SiteConfig.CrazyEgg %>
 </body>
 </html>

@@ -27,4 +27,15 @@ class TrackingConfig extends DataExtension
         ));
         return $fields;
     }
+
+    function onBeforeWrite() {
+        parent::onBeforeWrite();
+        // strip the rest of the code and get the id.  This stop accidental html structural breaks
+        preg_match("/scripts\/(\d{4}\/\d{4})\.js/i", $this->owner->CrazyEgg, $match);
+        if(isset($match[0])){
+            $CrazyEggID = istr_replace('scripts/','',$match[0]);
+            $CrazyEggID = istr_replace('.js','',$CrazyEggID);
+            $this->owner->CrazyEgg = $CrazyEggID;
+        }
+    }
 }
