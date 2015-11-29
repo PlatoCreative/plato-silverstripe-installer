@@ -9,7 +9,15 @@ class ContactPage extends UserDefinedForm
         'GoogleMap' => 'Text'
     );
 
-    private static $has_one = array();
+    private static $many_many = array(
+        'Phones' => 'Phone'
+    );
+
+    private static $many_many_extraFields = array(
+        'Phones' => array (
+            'Sort' => 'Int'
+        )
+    );
 
     function getCMSFields() {
         $fields = parent::getCMSFields();
@@ -19,10 +27,28 @@ class ContactPage extends UserDefinedForm
             HTMLEditorField::create('ExtraContent', 'Extra Content Area')
         ), 'Metadata');
 
+        $fields->addFieldsToTab(
+            'Root.Phone',
+            array(
+                GridField::create(
+                    'Phones',
+                    'Current phone number(s)',
+                    $this->Phones(),
+                    GridFieldConfig_RelationEditor::create()
+                        ->removeComponentsByType('GridFieldAddNewButton')
+                        // ->addComponent(new GridFieldAddExistingSearchButton())
+                        ->addComponent(new GridFieldEditableColumns())
+                        ->addComponent(new GridFieldDeleteAction())
+                        ->addComponent(new GridFieldAddNewInlineButton())
+                        ->addComponent(new GridFieldOrderableRows())
+                )
+            )
+        );
+
         // Google Map
-	$fields->addFieldsToTab('Root.GoogleMap', array(
-		TextField::create('GoogleMap', 'Google Map URL')
-	));
+	    $fields->addFieldsToTab('Root.GoogleMap', array(
+    		TextField::create('GoogleMap', 'Google Map URL')
+    	));
 
         return $fields;
     }
