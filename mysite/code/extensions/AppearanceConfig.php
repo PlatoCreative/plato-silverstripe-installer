@@ -11,6 +11,10 @@ class AppearanceConfig extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
 	{
+        if ($themeField = $fields->fieldByName('Root.Main.Theme')) {
+            $fields->removeFieldFromTab('Root.Main', 'Theme');
+            $fields->addFieldToTab('Root.Appearance.Main', $themeField);
+        }
         // Navigation
         $fields->addFieldsToTab(
             'Root.Appearance.Navigation',
