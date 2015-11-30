@@ -1,7 +1,7 @@
 <% if Number %>
 <% with Number %>
 <a href="tel:{$Number.PhoneFriendly}">
-    <i class="fa {$Icon} fa-fw"></i> {$Title}
+    <i class="fa fa-{$Icon} fa-fw"></i> {$Title}
 </a>
 <% end_with %>
 <% end_if %>
@@ -11,7 +11,7 @@
     <% loop Numbers.sort('Sort ASC') %>
     <li>
         <a href="tel:{$Number.PhoneFriendly}">
-            <i class="fa {$Icon} fa-fw"></i> {$Title}
+            <i class="fa fa-{$Icon} fa-fw"></i> {$Title}
         </a>
     </li>
     <% end_loop %>

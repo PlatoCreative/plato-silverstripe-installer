@@ -58,15 +58,15 @@ class Phone extends Dataobject
     {
         switch ($this->Type) {
             case 'Mobile':
-                return 'fa-mobile';
+                return 'mobile';
                 break;
             case 'Fax':
-                return 'fa-fax';
+                return 'fax';
                 break;
             case 'Phone':
             case 'Free Phone':
             default:
-                return 'fa-phone';
+                return 'phone';
                 break;
         }
     }
