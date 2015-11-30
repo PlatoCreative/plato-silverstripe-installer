@@ -6,6 +6,5 @@
     "jquery-cycle2": "2.1.6",
     "modernizr": "3.2.0",
     "fancybox": "2.1.5"
-  },
-  "directory": "vendor/"
+  }
 }
