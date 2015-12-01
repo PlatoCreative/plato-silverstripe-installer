@@ -13,8 +13,9 @@ SiteConfig:
   extensions:
     0: CustomSiteConfig
     1: ContactConfig
-    2: TrackingConfig
-    3: AppearanceConfig
+    2: SocialConfig
+    3: TrackingConfig
+    4: AppearanceConfig
 LeftAndMain:
   extra_requirements_javascript:
     - >
