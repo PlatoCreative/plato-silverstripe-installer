@@ -38,7 +38,7 @@
     "jonom/focuspoint": "dev-master",
     "sheadawson/silverstripe-linkable": "dev-master",
     "thisisbd/silverstripe-fontawesome-iconpickerfield": "dev-master",
-    "plato-creative/plato-genericlogin" : "3.1.*"
+    "plato-creative/plato-genericlogin" : "3.2.*"
   },
   "autoload": {
     "psr-4": {
