@@ -4,10 +4,12 @@
             <% with SiteConfig %>
             <a class="siteName" href="$BaseDir">
                 <% if Logo %>
-                    <img data-interchange="
-                        [$Logo.Fit(90, 90).URL, (small)],
-                        [$Logo.Fit(180, 180).URL, (medium)],
-                        [$Logo.Fit(180, 180).URL, (large)]"
+                    <img
+                    title='{$Title}'
+                    data-interchange="
+                        [$Logo.Fit(90, 90).URL, small],
+                        [$Logo.Fit(180, 180).URL, medium],
+                        [$Logo.Fit(180, 180).URL, large]"
                         />
                 <% else %>
                     $Title
