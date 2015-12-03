@@ -2,10 +2,14 @@
 class AppearanceConfig extends DataExtension
 {
     private static $db = array(
+        'AppName' => 'Varchar(20)',
+        'ThemeColor' => 'Varchar(7)',
         'NavgationLevel' => 'Int'
     );
 
-    private static $has_one = array();
+    private static $has_one = array(
+        'Logo' => 'Image'
+    );
 
     private static $has_many = array();
 
@@ -15,6 +19,22 @@ class AppearanceConfig extends DataExtension
             $fields->removeFieldFromTab('Root.Main', 'Theme');
             $fields->addFieldToTab('Root.Appearance.Main', $themeField);
         }
+        $fields->addFieldsToTab(
+            'Root.Appearance.Main',
+            array(
+                UploadField::create(
+                    'Logo',
+                    'Logo'
+                )->setDescription('Upload the site logo'),
+                TextField::create(
+                    'AppName'
+                ),
+                TextField::create(
+                    'ThemeColor'
+                )
+            )
+        );
+
         // Navigation
         $fields->addFieldsToTab(
             'Root.Appearance.Navigation',
