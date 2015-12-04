@@ -1,0 +1,129 @@
+/*
+Form Elements
+------------
+This file should contain base elements form forms .e.g. inputs and textarea
+No structural or layout styles should be in this file.
+*/
+
+// --------------- inputs ---------------
+// --------------- text ---------------
+input.text,
+input[type=text] {
+
+}
+
+// --------------- textarea ---------------
+textarea {
+
+}
+
+// --------------- email ---------------
+input.email,
+input[type=email] {
+
+}
+
+// --------------- password ---------------
+input.password,
+input[type=password] {
+
+}
+
+// --------------- web site  address ---------------
+input.url,
+input[type=url] {
+
+}
+
+// --------------- search ---------------
+input.search,
+input[type=search] {
+
+}
+
+// --------------- select menu ---------------
+input.text,
+input[type=text] {
+
+}
+// --------------- checkbox ---------------
+input.text,
+input[type=text] {
+
+}
+// --------------- radio ---------------
+input.text,
+input[type=text] {
+
+}
+// --------------- color ---------------
+input.text,
+input[type=text] {
+
+}
+// --------------- number ---------------
+input.number,
+input[type=number] {
+
+}
+// --------------- range ---------------
+input.range,
+input[type=range] {
+
+}
+// --------------- date ---------------
+input.date,
+input[type=date] {
+
+}
+// --------------- month ---------------
+input.month,
+input[type=month] {
+
+}
+// --------------- week ---------------
+input.week,
+input[type=week] {
+
+}
+// --------------- datetime ---------------
+input.datetime,
+input[type=datetime] ,
+input.datetime-local,
+input[type=datetime-local] {
+
+}
+
+// --------------- required ---------------
+.requiredField>label{
+  &:after{
+    content: ' *';
+    color: $alert-color;
+  }
+}
+
+// --------------- errors ---------------
+
+span.error,
+small.error{
+
+}
+// --------------- buttons ---------------
+.btn,
+.button,
+input.submit,
+input[type=submit] {
+  @extend button;
+}
+
+// --------------- search buttons ---------------
+
+button[value=Search]{
+
+}
+
+// --------------- field wrapper ---------------
+
+.field{
+
+}

@@ -1,6 +1,6 @@
 @import "foundation-sites/scss/foundation";
 @import "settings";
-@import "base";
+@import "base/*";
 
 // This will create classes for everything
 // If you uncomment this then make sure you comment out the options below
@@ -43,4 +43,6 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 
-@import "layout";
+@import "layout/*";
+
+@import "shame/shame";
