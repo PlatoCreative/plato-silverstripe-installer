@@ -23,9 +23,29 @@ ErrorDocument 500 /assets/error-500.html
 <IfModule mod_rewrite.c>
 	SetEnv HTTP_MOD_REWRITE On
 	RewriteEngine On
-	#RewriteBase '/~vizstage/pwd/'
-
-	#RewriteBase '/'
+	
+	# Modify the RewriteBase if you are using Silverstripe in a subdirectory or in a
+	# VirtualDocumentRoot and the rewrite rules are not working properly.
+	# For example if your site is at http://example.com/silverstripe uncomment and
+	# modify the following line:
+	# RewriteBase /silverstripe
+	
+	# If your site is running in a VirtualDocumentRoot at http://example.com/,
+  	# uncomment the following line:
+	# RewriteBase '/'
+	
+	# To redirect all users to access the site WITH the 'www.' prefix,
+	# (http://example.com/... will be redirected to http://www.example.com/...)
+	# uncomment the following:
+	# RewriteCond %{HTTP_HOST} .
+	# RewriteCond %{HTTP_HOST} !^www\. [NC]
+	# RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+	#
+	# To redirect all users to access the site WITHOUT the 'www.' prefix,
+	# (http://www.example.com/... will be redirected to http://example.com/...)
+	# uncomment the following:
+	# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+	# RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
 	RewriteRule ^vendor(/|$) - [F,L,NC]
 	RewriteRule silverstripe-cache(/|$) - [F,L,NC]
