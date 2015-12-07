@@ -9,21 +9,21 @@ class TrackingConfig extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldsToTab('Root.Tracking.Google', array(
+        $fields->addFieldsToTab('Root.Tracking.Main', array(
             TextField::create(
                 'GoogleTagManager',
                 'Tag manager ID'
             )->setAttribute("placeholder", "GTM-******"),
-            TextField::create(
-                'GoogleAnaltyicsID',
-                'Analytics ID'
-            )->setAttribute("placeholder", "UA-******-*")
         ));
         $fields->addFieldsToTab('Root.Tracking.Other', array(
             TextareaField::create(
                 'CrazyEgg',
                 'CrazyEgg Code'
-            )
+            ),
+            TextField::create(
+                'GoogleAnaltyicsID',
+                'Analytics ID'
+            )->setAttribute("placeholder", "UA-******-*")
         ));
         return $fields;
     }
