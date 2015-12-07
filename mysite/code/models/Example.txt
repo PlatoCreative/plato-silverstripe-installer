@@ -1,0 +1,100 @@
+<?php
+class Example extends DataObject
+{
+
+    /**
+     * Singular name for CMS
+     * @return string
+     */
+    private static $singular_name = "";
+
+    /**
+     * Plural name for CMS
+     * @return string
+     */
+    private static $plural_name = "";
+
+    /**
+     * Database fields
+     * @return array
+     */
+    private static $db = array ();
+
+    /**
+     * Has_one relationship
+     * @return array
+     */
+    private static $has_one = array();
+
+    /**
+     * Has_many relationship
+     * @return array
+
+    private static $has_many = array();
+
+    /**
+     * Many_many relationship
+     * @return array
+     */
+    private static $many_many = array();
+
+    /**
+     * Belongs_many_many relationship
+     * @return array
+     */
+    private static $belongs_many_many = array();
+
+    /**
+     * CMS Fields
+     * @return array
+     */
+    private static $summary_fields = array();
+
+    /**
+     * Default sort ordering
+     * @return string
+     */
+    private static $default_sort = "";
+
+    /**
+     * CMS Fields
+     * @return FieldList
+     */
+    public function getCMSFields()
+    {
+        $fields = new FieldList();
+        return $fields;
+    }
+
+    /**
+     * Viewing Permissions
+     */
+    public function canView($member = null) {
+        return Permission::check('CMS_ACCESS_CMSMain', 'any', $member);
+    }
+
+    /**
+     * Editing Permissions
+     * @return boolean
+     */
+    public function canEdit($member = null) {
+        return Permission::check('CMS_ACCESS_CMSMain', 'any', $member);
+    }
+
+    /**
+     * Deleting Permissions
+     * @return boolean
+     */
+    public function canDelete($member = null) {
+        return Permission::check('CMS_ACCESS_CMSMain', 'any', $member);
+    }
+
+    /**
+     * Creating Permissions
+     * @return boolean
+     */
+    public function canCreate($member = null) {
+        return Permission::check('CMS_ACCESS_CMSMain', 'any', $member);
+    }
+
+}
