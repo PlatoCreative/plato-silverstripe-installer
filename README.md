@@ -6,8 +6,6 @@ This installer requires you have the following:
 - Composer
 - Bower
 - Compass
-
-### Recommended ###
 - Bundle
 
 ### Installation ###
