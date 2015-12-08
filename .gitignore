@@ -6,6 +6,8 @@
 !/themes/*
 !/composer.json
 !/composer.lock
+!/bower.json
+!/.bowerrc
 !/README.md
 !/LICENSE*
 *Thumbs.db

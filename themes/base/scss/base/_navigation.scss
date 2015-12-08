@@ -1,0 +1,19 @@
+/*
+navigation
+----------
+This file should contain base styling for navigation.
+This means padding, link colors and hovers effects.
+NO Layout styles at this stage.
+*/
+
+nav,
+.navigation {
+  ul,
+  ol{
+    list-style: none;
+    margin: 0;
+  }
+  a{
+    display: block;
+  }
+}

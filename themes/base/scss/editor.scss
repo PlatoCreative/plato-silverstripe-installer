@@ -1,4 +1,7 @@
 // import typography styles for the editor in the CMS
-@import 'settings';
-@import 'foundation';
-@import 'typography';
+@import "foundation-sites/scss/foundation";
+@import "settings";
+
+.typography {
+  @import "base/base";
+}

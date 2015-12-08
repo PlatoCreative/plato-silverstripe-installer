@@ -1,31 +1,52 @@
 <?php
-class CustomLink extends DataExtension{
+class CustomLink extends DataExtension
+{
 	private static $db = array(
-        'FontAwesomeIcon' => 'varchar',
+		'FAIcon' => 'varchar',
 		'TrackingID' => 'varchar'
-    );
+	);
 
 	public function updateCMSFields(FieldList $fields)
 	{
-        $fields->addFieldsToTab(
+		$fields->addFieldsToTab(
 			'Root.Main',
 			array(
-	            FontAwesomeIconPickerField::create('FontAwesomeIcon', 'Font Awesome Icon'),
-				TextField::create('TrackingID','Tracking ID')
-	        ),
+				FontAwesomeIconPickerField::create(
+				'FAIcon',
+				'Icon'
+			),
+			TextField::create(
+				'TrackingID',
+				'Tracking ID'
+				)
+			),
 			'OpenInNewWindow'
 		);
-        return $fields;
-    }
+		return $fields;
+	}
 
-	public function getIcon() {
-		$icon = $this->owner->FontAwesomeIcon ? Convert::raw2att( $this->owner->FontAwesomeIcon ) : '';
+	public function getIcon()
+	{
+		$icon = $this->owner->FAIcon ? Convert::raw2att( $this->owner->FAIcon ) : '';
 		return $icon ? "<i class='fa $icon'></i>" : '';
 	}
 
-	public function getIDAttr() {
-		$id = $this->owner->TrackingID ? str_replace(' ','_',Convert::raw2att( $this->owner->TrackingID )) : '';
-		return $id ? " id='fa $id'" : '';
+	public function getTrackingAttr()
+	{
+		$attr = '';
+		$siteConfig = SiteConfig::current_site_config();
+
+		if($this->owner->TrackingID){
+			if(isset($siteConfig->GoogleTagManager)){
+				$id = Convert::raw2att(str_replace(' ','_',$this->owner->TrackingID));
+				$attr .= " id='$id' ";
+			}
+			if(isset($siteConfig->GoogleAnaltyicsID)){
+				$track = Convert::raw2att($this->owner->TrackingID);
+				$attr .= " data-ga-label='$track' ";
+			}
+		}
+		return $attr;
 	}
 
 	public function updateLinkTemplate($l, &$link)
@@ -35,8 +56,8 @@ class CustomLink extends DataExtension{
 			$target = $l->getTargetAttr();
 			$class = $l->getClassAttr();
 			$icon = $l->getIcon();
-			$id = $l->getIDAttr();
-			$link = "<a href='$url' $target $class $id>{$icon}$title</a>";
+			$tracking = $l->getTrackingAttr();
+			$link = "<a href='$url' $target $class $tracking>{$icon}$title</a>";
 			return $link;
 		}
 	}

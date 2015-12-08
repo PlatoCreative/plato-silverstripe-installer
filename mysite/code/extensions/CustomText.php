@@ -1,24 +1,28 @@
 <?php
-class CustomText extends DataExtension{
+class CustomText extends DataExtension
+{
 	/**
-	  * Removes spaces from this StringField.
-	  *
-	  * @return string
-	  */
-	public function NoSpaces(){
+	* Removes spaces from this StringField.
+	*
+	* @return string
+	*/
+	public function NoSpaces()
+	{
 		return str_replace(' ', '', $this->owner->value);
 	}
 
 	/**
-	  * Provides string replace on StringField
-	  *
-	  * @return string
-	  */
-	public function StrReplace($search = ' ', $replace = ''){
+	* Provides string replace on StringField
+	*
+	* @return string
+	*/
+	public function StrReplace($search = ' ', $replace = '')
+	{
 		return str_replace($search, $replace, $this->owner->value);
 	}
 
-	public function PhoneFriendly(){
+	public function PhoneFriendly()
+	{
 		$ReplacementPattern = array(
 			'a' => '2',
 			'b' => '2',
@@ -52,7 +56,8 @@ class CustomText extends DataExtension{
 		return str_ireplace(array_keys($ReplacementPattern), array_values($ReplacementPattern), $this->owner->value);
 	}
 
-	public function URLFriendly(){
+	public function URLFriendly()
+	{
 		return str_replace(' ', '_', strtolower($this->owner->value));
 	}
 }

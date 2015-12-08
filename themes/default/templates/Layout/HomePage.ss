@@ -1,4 +1,0 @@
-<section>
-  $Content
-  $Form
-</section>

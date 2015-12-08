@@ -1,14 +1,11 @@
-<footer>
+<footer class="footer">
     <div class="row">
-        <div class="large-4 medium-6 small-12 column">
-            <ul>
+        <div class="large-4 medium-6 column">
+            <% include Phone Numbers=$SiteConfig.Phones %>
+            <ul>                
                 <% with SiteConfig %>
-                <% if Phone %><li><a href="tel:{$Phone}"><i class="fa fa-phone fa-fw"></i> {$Phone}</a></li><% end_if %>
-                <% if Mobile %><li><a href="tel:{$Mobile}"><i class="fa fa-mobile fa-fw"></i> {$Mobile}</a></li><% end_if %>
-                <% if FreePhone %><li><a href="tel:{$FreePhone.PhoneFriendly}"><i class="fa fa-phone fa-fw"></i> {$FreePhone}</a></li><% end_if %>
                 <% if PhysicalAddress %><li><a href="map:{$PhysicalAddress}"><i class="fa fa-map-marker fa-fw"></i> {$PhysicalAddress}</a></li><% end_if %>
                 <% if PostalAddress %><li><a href="javascript:;"><i class="fa fa-envelope fa-fw"></i> {$PostalAddress}</a></li><% end_if %>
-                <li><a href="{$BaseHref}"><h3>{$Title}</h3></a></li>
                 <% end_with %>
             </ul>
         </div>
@@ -24,13 +21,13 @@
                 <% end_with %>
             </ul>
         </div>
-        <div class="large-4 medium-12 text-right medium-only-text-center small-only-text-left column">
-            <div class="row">
-                <div class="large-12 column">
-                    <p>&copy; Copyright $SiteConfig.Title $Now.Year</p>
-                    <p>Website design by <a href="http://platocreative.co.nz" target="_blank">Plato Creative</a></p>
-                </div>
-            </div>
+    </div>
+</footer>
+<footer class="footer contentInfo" role="contentInfo">
+    <div class="row">
+        <div class="text-center column">
+            <small class="copyright" rel="license">&copy; Copyright $SiteConfig.Title $Now.Year</small>
+            <small class="createdBy">Website design by <a href="http://platocreative.co.nz" target="_blank">Plato Creative</a></small>
         </div>
     </div>
 </footer>
