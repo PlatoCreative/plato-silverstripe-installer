@@ -39,7 +39,7 @@ class CustomLink extends DataExtension
 		if($this->owner->TrackingID){
 			if(isset($siteConfig->GoogleTagManager)){
 				$id = Convert::raw2att(str_replace(' ','_',$this->owner->TrackingID));
-				$attr .= " id='fa $id' ";
+				$attr .= " id='$id' ";
 			}
 			if(isset($siteConfig->GoogleAnaltyicsID)){
 				$track = Convert::raw2att($this->owner->TrackingID);
