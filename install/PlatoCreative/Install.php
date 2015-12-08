@@ -72,7 +72,7 @@ class Install
             }
         }
 
-        return 'live';
+        return 'dev';
     }
 
     /********************** EVENTS **********************/
