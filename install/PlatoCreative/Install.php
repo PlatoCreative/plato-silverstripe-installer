@@ -147,7 +147,7 @@ class Install
         }
 
         // echo shell_exec('cd ../../ && php framework/cli-script.php dev/build');
-        $io->write('Plato installer complete.');
+        $io->write('Plato configuration is complete.');
     }
 
     /**
