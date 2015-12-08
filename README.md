@@ -11,7 +11,7 @@ This installer requires you have the following:
 ### Installation ###
 Use composer to quickly create a new project:
 ```
-composer create-project plato-creative/plato-silverstripe-installer . 3.2.*
+composer create-project plato-creative/plato-silverstripe-installer . @dev
 ```
 When `composer install` is executed composer loads the PlatoCreative installer class and works through it's logic.
 It firstly asks the user for some site settings e.g. theme name and database name.
