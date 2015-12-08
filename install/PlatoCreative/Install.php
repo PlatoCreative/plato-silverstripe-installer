@@ -30,51 +30,6 @@ class Install
         return self::$basePath;
     }
 
-    /**
-    * Returns a text description of the current environment type. Assumes
-    * 'live' if it can't determine an environment type.
-    * @return string
-    */
-    protected static function getEnvironmentType()
-    {
-        $envFile = '_ss_environment.php';
-        $directory = realpath('.');
-
-        // Traverse directories "upwards" until we hit an unreadable directory
-        // or the root of the drive
-        do {
-            // Add the trailing slash we need to concatenate properly
-            $directory .= DIRECTORY_SEPARATOR;
-
-            // If it's readable, go ahead
-            if (is_readable($directory)) {
-                // If the file exists, return its path
-                if (file_exists($directory.$envFile)) {
-                    $file = $directory.$envFile;
-                }
-            } else {
-                // If we can't read the directory, give up
-                $file = false;
-                break;
-            }
-
-            // Go up a level
-            $directory = dirname($directory);
-
-            // If these are the same, we've hit the root of the drive
-        } while (dirname($directory) != $directory);
-
-        if ($file) {
-            include_once $file;
-
-            if (defined('SS_ENVIRONMENT_TYPE')) {
-                return SS_ENVIRONMENT_TYPE;
-            }
-        }
-
-        return 'dev';
-    }
-
     /********************** EVENTS **********************/
 
     /**
@@ -100,13 +55,6 @@ class Install
 
         // If BuildType exists don't run this script
         if(isset($config['BuildType'])){
-            exit;
-        }
-
-        // Check environment type
-        if (self::getEnvironmentType() !== 'dev') {
-            $io->write('LIVE Environment detected, installer will not complete.');
-            $io->write('Ensure a _ss_environment.php file exists and is set to DEV.');
             exit;
         }
 
@@ -161,5 +109,4 @@ class Install
         // echo shell_exec('cd ../../ && php framework/cli-script.php dev/build');
         $io->write("postUpdate event triggered.");
     }
-
 }
