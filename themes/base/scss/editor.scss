@@ -3,5 +3,11 @@
 @import "settings";
 
 .typography {
-  @import "base/base";
+  padding: rem-calc($grid-column-gutter/2);
 }
+
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-button;
+
+@import "base/base";
