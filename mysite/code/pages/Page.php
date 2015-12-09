@@ -46,7 +46,6 @@ class Page_Controller extends ContentController
             $requiredJS
         );
 
-
         // Requirements::customScript();
     }
 
