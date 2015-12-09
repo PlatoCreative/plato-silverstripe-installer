@@ -42,6 +42,7 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 
+@import "plugins/*";
 @import "base/*";
 @import "layout/*";
 
