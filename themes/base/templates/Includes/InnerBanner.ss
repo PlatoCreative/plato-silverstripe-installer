@@ -2,9 +2,9 @@
 <% if BannerLayout == 1 %>
     <div class="banner-layout-one banner-wrapper">
         <div class="banner-content" data-interchange="
-            [{$BannerImage.CroppedImage(600, 400).URL}, (small)],
-            [{$BannerImage.CroppedImage(1000, 400).URL}, (medium)],
-            [{$BannerImage.CroppedImage(1400, 400).URL}, (large)],
+            [{$BannerImage.Fill(600, 400).Link}, small],
+            [{$BannerImage.Fill(1000, 400).Link}, medium],
+            [{$BannerImage.Fill(1400, 400).Link}, large],
             ">
             <div class="row">
                 <div class="large-12 large-centered column">
@@ -24,9 +24,9 @@
         </div>
         <div class="large-6 medium-6 column">
             <div class="banner-image" data-interchange="
-                [{$BannerImage.CroppedImage(600, 400).URL}, (small)],
-                [{$BannerImage.CroppedImage(1000, 400).URL}, (medium)],
-                [{$BannerImage.CroppedImage(1400, 400).URL}, (large)],
+                [{$BannerImage.Fill(600, 400).Link}, small],
+                [{$BannerImage.Fill(1000, 400).Link}, medium],
+                [{$BannerImage.Fill(1400, 400).Link}, large],
                 ">
             </div>
         </div>
