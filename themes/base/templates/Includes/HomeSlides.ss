@@ -12,9 +12,9 @@
         >
     <% loop HomeSlides.Exclude("Status", "0") %>
         <div class="home-slide" data-interchange="
-            [{$Image.CroppedImage(600, 400).URL}, (small)],
-            [{$Image.CroppedImage(1000, 400).URL}, (medium)],
-            [{$Image.CroppedImage(1400, 400).URL}, (large)],
+            [{$Image.Fill(600, 400).Link}, small],
+            [{$Image.Fill(1000, 400).Link}, medium],
+            [{$Image.Fill(1400, 400).Link}, large],
             ">
             <div class="home-slide-content">
                 <div class="row">
