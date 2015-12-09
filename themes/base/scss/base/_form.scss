@@ -94,11 +94,19 @@ input[type=datetime-local] {
 
 }
 
-// --------------- required ---------------
-.requiredField>label{
-  &:after{
+// --------------- required and optional ---------------
+
+form:not(.userform){
+  .requiredField > label:after{
     content: ' *';
     color: $alert-color;
+  }
+}
+
+.userform{
+  .field:not(.requiredField) > label:after{
+    content: " (Optional)";
+    color: $medium-gray;
   }
 }
 
@@ -108,12 +116,13 @@ span.error,
 small.error{
 
 }
+
 // --------------- buttons ---------------
 .btn,
 .button,
 input.submit,
 input[type=submit] {
-  @extend button;
+  @include button;
 }
 
 // --------------- search buttons ---------------
