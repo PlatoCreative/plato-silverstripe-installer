@@ -63,7 +63,7 @@ class Install
             if(substr(strtolower($buildType), 0, 1 ) !== "y"){
                 // this will prevent anything from being fired afterwards
                 $config['BuildType'] = 'base'; // just for historical purposes we record the build type
-                echo shell_exec('cd ../../ && composer require plato-creative/plato-silverstripe-homeslides:dev-master plato-creative/plato-silverstripe-hometiles:dev-master plato-creative/plato-silverstripe-banners:1.0 plato-creative/plato-silverstripe-gallery:1.0');
+                echo shell_exec('cd ../../ && composer require plato-creative/plato-silverstripe-homeslides:dev-master plato-creative/plato-silverstripe-hometiles:dev-master plato-creative/plato-silverstripe-banners:dev-master plato-creative/plato-silverstripe-gallery:dev-master');
             }
         }
 
