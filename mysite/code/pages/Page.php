@@ -41,8 +41,8 @@ class Page_Controller extends ContentController
             Requirements::combine_files(
                 'fancybox.js',
                 array(
-                    '/thirdparty/fancybox/source/jquery.fancybox.pack.js',
-                    '/thirdparty/fancybox/source/helpers/jquery.fancybox-media.js'
+                    'thirdparty/fancybox/source/jquery.fancybox.pack.js',
+                    'thirdparty/fancybox/source/helpers/jquery.fancybox-media.js'
                 )
             );
         }
