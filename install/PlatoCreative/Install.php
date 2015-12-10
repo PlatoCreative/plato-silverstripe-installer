@@ -40,10 +40,11 @@ class Install
     public static function postInstall(Event $event)
     {
         $additionModules = array(
-            'plato-creative/plato-silverstripe-homeslides:dev-master' => 'homeslides',
-            'plato-creative/plato-silverstripe-hometiles:dev-master' => 'hometiles',
+            'plato-creative/plato-silverstripe-homeslides:dev-master' => 'home slides',
+            'plato-creative/plato-silverstripe-hometiles:dev-master' => 'home tiles',
             'plato-creative/plato-silverstripe-banners:dev-master' => 'banners',
-            'plato-creative/plato-silverstripe-gallery:dev-master' => 'gallery'
+            'plato-creative/plato-silverstripe-gallery:dev-master' => 'gallery',
+            'plato-creative/plato-silverstripe-sections:dev-master' => 'sections'
         );
         $io = $event->getIO();
         $basePath = (string) self::getBasepath();
