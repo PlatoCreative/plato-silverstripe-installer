@@ -1,4 +1,8 @@
 <% if GalleryItems %>
+
+<% require css("thirdparty/fancybox/source/jquery.fancybox.css") %>
+<% require css("thirdparty/fancybox/source/helpers/jquery.fancybox-buttons.css") %>
+
 <div class="gallery-block">
     <div class="row">
         <div class="large-12 medium-12 small-12 columns">
