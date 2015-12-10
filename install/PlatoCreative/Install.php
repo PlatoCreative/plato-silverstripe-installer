@@ -63,19 +63,19 @@ class Install
         if(isset($config['BuildType'])){
             exit;
         }
-
+        shell_exec("cd ../../");
         $config['BuildType'] = 'bespoke';
         if ($buildType = $io->ask('Do you want to install all base modules? Y or N: ')) {
             if(substr(strtolower($buildType), 0, 1 ) === "y"){
                 // this will prevent anything from being fired afterwards
                 $config['BuildType'] = 'base'; // just for historical purposes we record the build type
                 $additionModulesString = implode(' ', array_keys($additionModules));
-                echo shell_exec("cd ../../ && composer require $additionModulesString");
+                echo shell_exec("composer require $additionModulesString");
             } else {
                 foreach ($additionModules as $module => $name) {
                     if ($answer = $io->ask("Do you want to install $name? Y or N: ")) {
                         if(substr(strtolower($answer), 0, 1 ) === "y"){
-                            echo shell_exec("cd ../../ && composer require $module");
+                            echo shell_exec("composer require $module");
                         }
                     }
                 }
