@@ -66,7 +66,7 @@ class Install
 
         $config['BuildType'] = 'bespoke';
         if ($buildType = $io->ask('Do you want to install all base modules? Y or N: ')) {
-            if(substr(strtolower($buildType), 0, 1 ) !== "y"){
+            if(substr(strtolower($buildType), 0, 1 ) === "y"){
                 // this will prevent anything from being fired afterwards
                 $config['BuildType'] = 'base'; // just for historical purposes we record the build type
                 $additionModulesString = implode(' ', array_keys($additionModules));
@@ -74,7 +74,7 @@ class Install
             } else {
                 foreach ($additionModules as $module => $name) {
                     if ($answer = $io->ask("Do you want to install $name? Y or N: ")) {
-                        if(substr(strtolower($answer), 0, 1 ) !== "y"){
+                        if(substr(strtolower($answer), 0, 1 ) === "y"){
                             echo shell_exec("cd ../../ && composer require $module");
                         }
                     }
