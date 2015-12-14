@@ -241,3 +241,28 @@ a{
 blockquote cite{
 
 }
+
+// --------------- heading groups ---------------
+
+// Use to create a subheading under a main header
+// Make sure you pair the two elements in a <header> element, like this:
+//   <h1>Heading</h1>
+//   <h2>Subheading</h2>
+// or
+//   <h2>Heading</h2>
+//   <h4>Subheading</h4>
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  & + & {
+    margin-top: $subheader-margin-top;
+    margin-bottom: $subheader-margin-bottom;
+    font-weight: $subheader-font-weight;
+    line-height: $subheader-lineheight;
+    color: $subheader-color;
+  }
+}
