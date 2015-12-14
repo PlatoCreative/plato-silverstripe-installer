@@ -30,7 +30,9 @@ class SocialConfig extends DataExtension
                 'Pinterest URL'
             )->setAttribute("placeholder", "http://www.pinterest.com"),
             TextField::create(
-                'InstagramURL', 'Instagram URL')->setAttribute("placeholder", "http://www.instagram.com"),
+                'InstagramURL',
+                'Instagram URL'
+            )->setAttribute("placeholder", "http://www.instagram.com"),
             TextField::create(
                 'LinkedInURL',
                 'LinkedIn URL'
