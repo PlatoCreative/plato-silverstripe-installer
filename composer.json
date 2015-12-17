@@ -29,6 +29,7 @@
     "silverstripe/userforms": "@stable",
     "silverstripe/secureassets": "~1.0.4",
     "plato-creative/plato-userforms-extensions": "dev-master",
+    "plato-creative/silverstripe-typekit" : "dev-master",
     "silverstripe-australia/gridfieldextensions": "1.3.0",
     "silverstripe/googlesitemaps": "dev-master",
     "kinglozzer/metatitle": "1.0.*",
