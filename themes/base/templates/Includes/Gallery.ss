@@ -1,8 +1,5 @@
 <% if GalleryItems %>
 
-<% require css("thirdparty/fancybox/source/jquery.fancybox.css") %>
-<% require css("thirdparty/fancybox/source/helpers/jquery.fancybox-buttons.css") %>
-
 <div class="gallery-block">
     <div class="row large-up-5 medium-up-3 small-up-2">
         <% loop GalleryItems %>
