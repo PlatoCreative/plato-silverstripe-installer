@@ -36,7 +36,7 @@
     "unclecheese/betterbuttons": "1.2.*",
     "lekoala/silverstripe-mandrill": "1.1.*",
     "tractorcow/silverstripe-robots": "*@dev",
-    "jonom/focuspoint": "dev-2.0-WIP",
+    "jonom/focuspoint": "2.0.1",
     "sheadawson/silverstripe-linkable": "dev-master",
     "thisisbd/silverstripe-fontawesome-iconpickerfield": "dev-master",
     "plato-creative/plato-genericlogin" : "3.2.*"
