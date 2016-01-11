@@ -1,6 +1,7 @@
 /*
 !/.gitignore
 !/.gitconfig
+!/.editorconfig
 !/mysite
 !/mysite/*
 !/themes
