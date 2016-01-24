@@ -2,8 +2,6 @@
 class AppearanceConfig extends DataExtension
 {
     private static $db = array(
-        'AppName' => 'Varchar(20)',
-        'ThemeColor' => 'Varchar(7)',
         'NavgationLevel' => 'Int'
     );
 
@@ -25,13 +23,7 @@ class AppearanceConfig extends DataExtension
                 UploadField::create(
                     'Logo',
                     'Logo'
-                )->setDescription('Upload the site logo'),
-                TextField::create(
-                    'AppName'
-                ),
-                TextField::create(
-                    'ThemeColor'
-                )
+                )->setDescription('Upload the site logo')
             )
         );
 
