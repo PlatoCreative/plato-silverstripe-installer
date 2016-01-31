@@ -1,0 +1,5 @@
+---
+name: spamprotection
+---
+FormSpamProtectionExtension:
+  default_spam_protector: '\StudioBonito\SilverStripe\SpamProtection\Honeypot\SpamProtector\HoneypotSpamProtector'
