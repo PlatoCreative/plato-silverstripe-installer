@@ -40,7 +40,10 @@
     "sheadawson/silverstripe-linkable": "dev-master",
     "thisisbd/silverstripe-fontawesome-iconpickerfield": "dev-master",
     "plato-creative/plato-genericlogin" : "3.2.*",
-    "mediabeast/flat-admin": "3.2.*"
+    "mediabeast/flat-admin": "3.2.*",
+    "studiobonito/silverstripe-spamprotection-honeypot" : "dev-master",
+    "bummzack/sortablefile" : "dev-master",
+    "mediabeast/fancy-devbuild": "1.*"
   },
   "autoload": {
     "psr-4": {
