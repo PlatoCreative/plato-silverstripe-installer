@@ -3,8 +3,9 @@ class Phone extends Dataobject
 {
     private static $db = array(
         'Type' => 'Enum(array("Phone","Mobile","Free Phone","Fax"),"Phone")',
-        'Number' => 'Varchar(20)',
-        'Label' => 'Varchar(20)'
+        'ContactNumber' => 'Varchar(20)',
+        'Label' => 'Varchar(20)',
+        'TrackingID' => 'Varchar'
     );
 
     private static $has_one = array(
@@ -14,8 +15,9 @@ class Phone extends Dataobject
 
     private static $summary_fields = array(
         'Type',
-        'Number',
-        'Label'
+        'ContactNumber',
+        'Label',
+        'TrackingID'
     );
 
     private static $default_sort = 'ID ASC';
@@ -34,7 +36,7 @@ class Phone extends Dataobject
                         ->enumValues()
                 ),
                 TextField::create(
-                    'Number',
+                    'ContactNumber',
                     'Number'
                 ),
                 TextField::create(
@@ -71,4 +73,22 @@ class Phone extends Dataobject
         }
     }
 
+    public function getTrackingAttr()
+	{
+		$attr = '';
+		$siteConfig = SiteConfig::current_site_config();
+        $TrackingID = ($this->TrackingID ? $this->TrackingID : $this->Type.' '.$this->ContactNumber);
+
+		if($TrackingID){
+			if(isset($siteConfig->GoogleTagManager)){
+				$id = Convert::raw2att(str_replace(' ','_',$TrackingID));
+				$attr .= " id='$id' ";
+			}
+			if(isset($siteConfig->GoogleAnaltyicsID)){
+				$track = Convert::raw2att($TrackingID);
+				$attr .= " data-ga-label='$track' ";
+			}
+		}
+		return $attr;
+	}
 }
