@@ -1,6 +1,6 @@
 <% if Number %>
 <% with Number %>
-<a href="tel:{$Number.PhoneFriendly}">
+<a href="tel:{$Number.PhoneFriendly}"{$TrackingAttr}>
     <i class="fa fa-{$Icon} fa-fw"></i> {$Title}
 </a>
 <% end_with %>
@@ -10,7 +10,7 @@
 <ul class='numbers'>
     <% loop Numbers.sort('Sort ASC') %>
     <li>
-        <a href="tel:{$Number.PhoneFriendly}">
+        <a href="tel:{$Number.PhoneFriendly}"{$TrackingAttr}>
             <i class="fa fa-{$Icon} fa-fw"></i> {$Title}
         </a>
     </li>
