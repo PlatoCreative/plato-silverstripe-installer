@@ -6,6 +6,10 @@
   padding: rem-calc(30);
 }
 
+p {
+  font-size: rem-calc(16);
+}
+
 @include foundation-global-styles;
 @include foundation-typography;
 @include foundation-button;
