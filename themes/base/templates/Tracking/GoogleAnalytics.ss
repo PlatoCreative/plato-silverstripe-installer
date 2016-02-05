@@ -1,13 +1,1 @@
-<% if trackingId %>
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', "$trackingId", 'auto');
-ga('require', 'linkid', 'linkid.js');
-ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-<% end_if %>
+<% if trackingId %><script type="text/javascript">!function(e,a,n,t,i,c,s){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,c=a.createElement(n),s=a.getElementsByTagName(n)[0],c.async=1,c.src=t,s.parentNode.insertBefore(c,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","$trackingId","auto"),ga("require","linkid","linkid.js"),ga("send","pageview");</script><% end_if %>

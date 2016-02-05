@@ -43,7 +43,8 @@
     "mediabeast/flat-admin": "3.2.*",
     "studiobonito/silverstripe-spamprotection-honeypot" : "dev-master",
     "bummzack/sortablefile" : "dev-master",
-    "mediabeast/fancy-devbuild": "1.*"
+    "mediabeast/fancy-devbuild": "1.*",
+    "coreiho/silverstripe-sections": "0.1"
   },
   "autoload": {
     "psr-4": {

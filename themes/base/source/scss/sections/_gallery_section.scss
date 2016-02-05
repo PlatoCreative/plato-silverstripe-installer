@@ -1,0 +1,10 @@
+.gallery-section {
+  padding: rem-calc(80 0);
+}
+
+.gallery-item{
+  margin-bottom: rem-calc($grid-column-gutter);
+  .img{
+    width: 100%;
+  }
+}

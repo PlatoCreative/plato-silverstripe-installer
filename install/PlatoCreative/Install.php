@@ -39,13 +39,6 @@ class Install
     */
     public static function postInstall(Event $event)
     {
-        $additionModules = array(
-            'plato-creative/plato-silverstripe-homeslides:dev-master' => 'home slides',
-            'plato-creative/plato-silverstripe-hometiles:dev-master' => 'home tiles',
-            'plato-creative/plato-silverstripe-banners:dev-master' => 'banners',
-            'plato-creative/plato-silverstripe-gallery:dev-master' => 'gallery',
-            'plato-creative/plato-silverstripe-sections:dev-master' => 'sections'
-        );
         $io = $event->getIO();
         $basePath = (string) self::getBasepath();
         $baseName = end((explode('/',$basePath)));
@@ -64,25 +57,6 @@ class Install
         if(isset($config['BuildType'])){
             exit;
         }
-        shell_exec("cd ../../");
-        $config['BuildType'] = 'bespoke';
-        if ($buildType = $io->ask('Do you want to install all base modules? Y or N: ')) {
-            if(substr(strtolower($buildType), 0, 1 ) === "y"){
-                // this will prevent anything from being fired afterwards
-                $config['BuildType'] = 'base'; // just for historical purposes we record the build type
-                $additionModulesString = implode(' ', array_keys($additionModules));
-                echo shell_exec("composer require $additionModulesString");
-            } else {
-                foreach ($additionModules as $module => $name) {
-                    if ($answer = $io->ask("Do you want to install $name? Y or N: ")) {
-                        if(substr(strtolower($answer), 0, 1 ) === "y"){
-                            echo shell_exec("composer require $module");
-                        }
-                    }
-                }
-            }
-        }
-
         $themesDir = "$basePath/themes/";
         $baseTheme = "$themesDir/base";
         // If the theme has already been renamed, assume this setup is complete

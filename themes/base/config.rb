@@ -30,7 +30,7 @@ require 'sass-media_query_combiner'
 add_import_path "../../thirdparty/"
 http_path = "/"
 css_dir = "css"
-sass_dir = "scss"
+sass_dir = "source/scss"
 images_dir = "img"
 javascripts_dir = "js"
 output_style = :compressed

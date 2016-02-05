@@ -1,0 +1,29 @@
+.banner-section,
+.banner-section .slider,
+.banner-section .slide {
+    width: 100%;
+    height: rem-calc(400);
+    padding: 0;
+    margin: 0;
+}
+
+.banner-section{
+  .title{
+    @extend h1;
+    margin-top: 100px;
+    color: $white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,1);
+  }
+  .content{
+    color: $white;
+    max-width: 60%;
+    text-shadow: 1px 1px 4px rgba(0,0,0,1);
+    @include breakpoint(small down) {
+      max-width: 100%;
+    }
+  }
+  .button {
+    color: $white;
+    display: inline-block;
+  }
+}

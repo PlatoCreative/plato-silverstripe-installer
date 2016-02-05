@@ -1,0 +1,37 @@
+.image-banner-section,
+.image-banner-section .slider,
+.image-banner-section .slide {
+    width: 100%;
+    height: rem-calc(400);
+    padding: 0;
+    margin: 0;
+}
+
+.image-banner-section{
+  .contents{
+    position: absolute;
+    top: 0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    z-index: 150;
+  }
+  .title{
+    @extend h1;
+    margin-top: 100px;
+    color: $white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,1);
+  }
+  .content{
+    color: $white;
+    max-width: 60%;
+    text-shadow: 1px 1px 4px rgba(0,0,0,1);
+    @include breakpoint(small down) {
+      max-width: 100%;
+    }
+  }
+  .button {
+    color: $white;
+    display: inline-block;
+  }
+}
