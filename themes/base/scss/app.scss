@@ -15,7 +15,7 @@
 @include foundation-float-classes;
 @include foundation-accordion;
 @include foundation-accordion-menu;
-// @include foundation-badge;
+@include foundation-badge;
 // @include foundation-breadcrumbs;
 // @include foundation-button-group;
 @include foundation-callout;
@@ -29,7 +29,7 @@
 @include foundation-menu;
 @include foundation-off-canvas;
 @include foundation-orbit;
-// @include foundation-pagination;
+@include foundation-pagination;
 // @include foundation-progress-bar;
 // @include foundation-slider;
 @include foundation-sticky;
@@ -42,8 +42,9 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 
+@import "mixins/*";
 @import "plugins/*";
-@import "base/*";
-@import "layout/*";
-
-@import "shame/shame";
+@import "base";
+@import "modules/*";
+@import "pages/*";
+@import "partials/*";
