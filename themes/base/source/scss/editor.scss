@@ -3,8 +3,8 @@
 @import "settings";
 
 .typography {
-  font-size: rem-calc($rem-base);
-  padding: rem-calc($grid-column-gutter/2);
+  font-size: $global-font-size;
+  padding: rem-calc(10);
 }
 
 @include foundation-global-styles;
