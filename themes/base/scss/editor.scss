@@ -3,7 +3,7 @@
 @import "settings";
 
 .typography {
-  padding: rem-calc($grid-column-gutter/2);
+  padding: rem-calc(30);
 }
 
 @include foundation-global-styles;
