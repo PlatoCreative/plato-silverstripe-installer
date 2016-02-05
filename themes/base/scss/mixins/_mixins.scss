@@ -1,0 +1,16 @@
+/*
+Mixins
+------------
+This file should contain all mixins for your site
+*/
+
+// Transitions
+// @include transition(color .3s ease);
+/******************************************************************************/
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
