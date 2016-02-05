@@ -44,7 +44,7 @@
     "studiobonito/silverstripe-spamprotection-honeypot" : "dev-master",
     "bummzack/sortablefile" : "dev-master",
     "mediabeast/fancy-devbuild": "1.*",
-    "coreiho/silverstripe-sections": "0.1"
+    "coreiho/silverstripe-sections": "dev-master"
   },
   "autoload": {
     "psr-4": {
