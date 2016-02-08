@@ -23,3 +23,11 @@ The base theme adds the following plato modules:
 - [Gallery](https://github.com/PlatoCreative/plato-silverstripe-gallery)
 - [Banner](https://github.com/PlatoCreative/plato-silverstripe-banners)
 - [Page section](https://github.com/PlatoCreative/plato-silverstripe-sections)
+
+
+#### Tests via PHPUnit ####
+To run PHPUnit and tests use:
+```cli
+vendor/bin/phpunit
+```
+Edit phpunit.xml to change default configuration.
