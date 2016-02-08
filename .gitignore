@@ -12,6 +12,7 @@
 !/.bowerrc
 !/README.md
 !/LICENSE*
+!/phpunit.xml
 *Thumbs.db
 *web.config
 *.log
