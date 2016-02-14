@@ -30,6 +30,7 @@
 									</a>
 									<% end_loop %>
 								</div>
+								<% end_if %>
 							</div>
 						</li>
 					<% end_loop %>
