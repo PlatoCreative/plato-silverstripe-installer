@@ -28,3 +28,6 @@ StringField:
 Link:
   extensions:
     - CustomLink
+ListSection:
+  Styles:
+    - Accordion
