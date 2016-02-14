@@ -2,7 +2,7 @@
 <nav {$ClassAttr}{$AnchorAttr} aria-label="breadcrumbs" role="navigation">
 	<div class="row">
 		<div class="column">
-			<ul>
+			<ul class="breadcrumbs">
 				<li class="item"><a href="/">Home</a></li>
 				<%-- use css :after to add things like / or > --%>
 				<% loop Pages %>
