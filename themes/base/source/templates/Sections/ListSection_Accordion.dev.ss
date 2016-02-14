@@ -4,7 +4,7 @@
 			<% if Items %>
 				<ul class="accordion" data-accordion>
 					<% loop Items %>
-						<li class="item accordion-item is-active" data-accordion-item>
+						<li class="item accordion-item<% if First %> is-active<% end_if %>" data-accordion-item>
 							<a class="accordion-title">$Title</a>
 							<div class="accordion-content" data-tab-content>
 								<% if Image %>
