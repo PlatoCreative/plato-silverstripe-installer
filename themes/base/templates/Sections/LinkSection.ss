@@ -7,20 +7,20 @@
 			</h2>
 			<% end_if %>
 			<% if ListLinks %>
-			<div class="row" data-equalizer>
-				<% loop ListLinks %>
-					<div class="column medium-6 large-4<% if Last %> end<% end_if %>">
-						<a class="preview" href="$LinkURL" {$TargetAttr}{$TrackingAttr}>
-							<% if PreviewImage %>
-								<% with PreviewImage %>
-									<div class="image" data-interchange="
-										[{$FocusFill(330, 150).Link}, small],
-										[{$FocusFill(330, 150).Link}, medium],
-										[{$FocusFill(330, 150).Link}, large],
-										">
-									</div>
-								<% end_with %>
-							<% end_if %>
+			<% loop ListLinks %>
+				<div class="row">
+					<a class="preview<% if $MultipleOf(2) %> even<% end_if %>" href="$LinkURL" {$TargetAttr}{$TrackingAttr}>
+						<% if PreviewImage %>
+							<% with PreviewImage %>
+								<div class="image column small-12 medium-3 large-5" data-interchange="
+									[{$FocusFill(450, 315).Link}, small],
+									[{$FocusFill(450, 315).Link}, medium],
+									[{$FocusFill(450, 315).Link}, large],
+									">
+								</div>
+							<% end_with %>
+						<% end_if %>
+						<div class="column small-12 medium-9 large-7">
 							<div class="contents">
 								<% if Title %>
 									<p class='title'>
@@ -29,19 +29,23 @@
 								<% end_if %>
 								<% if Content %>
 									<p class="content" data-equalizer-watch>
-										{$Content}
+										{$Content.LimitCharacters(350)}
 									</p>
 									<% end_if %>
 								<% if ReadMore %>
 									<span class="more">
 										{$Icon}{$ReadMore}
 									</span>
+								<% else %>
+									<span class="more">
+										{$Icon}Read more
+									</span>
 								<% end_if %>
 							</div>
-						</a>
-					</div>
-				<% end_loop %>
-			</div>
+						</div>
+					</a>
+				</div>
+			<% end_loop %>
 			<% end_if %>
 		</div>
 	</div>

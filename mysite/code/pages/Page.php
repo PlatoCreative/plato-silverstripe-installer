@@ -30,13 +30,9 @@ class Page_Controller extends ContentController
             'thirdparty/foundation-sites/dist/foundation.min.js',
             'thirdparty/jquery-cycle2/build/jquery.cycle2.min.js',
             'thirdparty/jquery-cycle2/build/plugin/jquery.cycle2.swipe.min.js',
-            $this->ThemeDir().'/js/app.js'
+            'thirdparty/fancybox/source/jquery.fancybox.pack.js',
+            'thirdparty/fancybox/source/helpers/jquery.fancybox-media.js'
         );
-
-        if(class_exists('GalleryItem')) {
-            $requiredJS[] = 'thirdparty/fancybox/source/jquery.fancybox.pack.js';
-            $requiredJS[] = 'thirdparty/fancybox/source/helpers/jquery.fancybox-media.js';
-        }
 
         $requiredJS[] = $this->ThemeDir().'/js/app.js';
 
@@ -46,8 +42,9 @@ class Page_Controller extends ContentController
             $requiredJS
         );
 
+        Requirements::css("thirdparty/fancybox/source/jquery.fancybox.css");
+        Requirements::css("thirdparty/fancybox/source/helpers/jquery.fancybox-buttons");
 
-        // Requirements::customScript();
     }
 
     public function IsLive()

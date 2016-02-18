@@ -1,0 +1,38 @@
+.link-section {
+  padding: rem-calc(10 0);
+  .title{
+    @extend h5;
+    color: $dark-gray;
+    margin-bottom: rem-calc(22);
+  }
+  .preview{
+    border-bottom: rem-calc(1) solid $medium-gray;
+    background-color: $white;
+    display: block;
+    margin-bottom: rem-calc(30);
+    padding-bottom: rem-calc(30);
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .image{
+      height: rem-calc(315);
+      background-size: cover;
+      background-position: center;
+    }
+    .title{
+      @extend h4;
+      color: $black;
+    }
+    .content{
+      color: $dark-gray;
+    }
+    .contents{
+      padding: rem-calc(35);
+    }
+    .more{
+      @extend .button;
+    }
+  }
+}

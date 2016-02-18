@@ -31,3 +31,9 @@ Link:
 ListSection:
   Styles:
     - Accordion
+    - HorizontalTabs
+    - VerticalTabs
+LinkSection:
+  styles:
+    - Tiles
+    - BlockList

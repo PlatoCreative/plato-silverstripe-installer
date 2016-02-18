@@ -2,7 +2,7 @@
 class ContactPage extends UserDefinedForm
 {
 
-    private static $icon = 'mysite/images/contact.png';
+    private static $icon = 'mysite/img/contact.png';
 
     private static $db = array(
         'ExtraContent' => 'HTMLText',
