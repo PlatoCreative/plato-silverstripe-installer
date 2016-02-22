@@ -37,6 +37,9 @@ LinkSection:
   styles:
     - Tiles
     - BlockList
+Page:
+  LimitSectionTypes:
+    BreadcrumbSection: 0
 ContactPage:
   LimitSectionTypes:
     FormSection: 0
