@@ -29,7 +29,7 @@ Link:
   extensions:
     - CustomLink
 ListSection:
-  Styles:
+  styles:
     - Accordion
     - HorizontalTabs
     - VerticalTabs
