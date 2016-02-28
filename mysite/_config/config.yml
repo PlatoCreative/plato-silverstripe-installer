@@ -38,11 +38,14 @@ LinkSection:
     - Tiles
     - BlockList
 Page:
-  LimitSectionTypes:
-    BreadcrumbSection: 0
+  section_options:
+    BreadcrumbSection:
+      limit: 0 # Excludes breadcrumbs on all pagetypes.
 ContactPage:
-  LimitSectionTypes:
-    FormSection: 0
+  section_options:
+    FormSection:
+      limit: 0
 UserDefinedForm:
-  LimitSectionTypes:
-    FormSection: 0
+  section_options:
+    FormSection:
+      limit: 0
