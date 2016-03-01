@@ -34,7 +34,6 @@
     "silverstripe/googlesitemaps": "dev-master",
     "kinglozzer/metatitle": "1.0.*",
     "unclecheese/betterbuttons": "1.2.*",
-    "lekoala/silverstripe-mandrill": "1.1.*",
     "tractorcow/silverstripe-robots": "*@dev",
     "jonom/focuspoint": "2.0.1",
     "sheadawson/silverstripe-linkable": "dev-master",
