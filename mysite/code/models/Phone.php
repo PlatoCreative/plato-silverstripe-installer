@@ -1,6 +1,10 @@
 <?php
 class Phone extends Dataobject
 {
+    /**
+     * Database fields
+     * @var array
+     */
     private static $db = array(
         'Type' => 'Enum(array("Phone","Mobile","Free Phone","Fax"),"Phone")',
         'ContactNumber' => 'Varchar(20)',
@@ -8,6 +12,10 @@ class Phone extends Dataobject
         'TrackingID' => 'Varchar'
     );
 
+    /**
+     * Has_one relationship
+     * @var array
+     */
     private static $has_one = array(
         'SiteConfig' => 'SiteConfig',
         'SiteTree' => 'SiteTree'
@@ -20,8 +28,16 @@ class Phone extends Dataobject
         'TrackingID'
     );
 
+    /**
+     * Default sort ordering
+     * @var string
+     */
     private static $default_sort = 'ID ASC';
 
+    /**
+     * CMS Fields
+     * @return FieldList
+     */
     function getCMSFields()
     {
         $fields = parent::getCMSFields();
@@ -74,21 +90,21 @@ class Phone extends Dataobject
     }
 
     public function getTrackingAttr()
-	{
-		$attr = '';
-		$siteConfig = SiteConfig::current_site_config();
+    {
+        $attr = '';
+        $siteConfig = SiteConfig::current_site_config();
         $TrackingID = ($this->TrackingID ? $this->TrackingID : $this->Type.' '.$this->ContactNumber);
 
-		if($TrackingID){
-			if(isset($siteConfig->GoogleTagManager)){
-				$id = Convert::raw2att(str_replace(' ','_',$TrackingID));
-				$attr .= " id='$id' ";
-			}
-			if(isset($siteConfig->GoogleAnaltyicsID)){
-				$track = Convert::raw2att($TrackingID);
-				$attr .= " data-ga-label='$track' ";
-			}
-		}
-		return $attr;
-	}
+        if($TrackingID){
+            if(isset($siteConfig->GoogleTagManager)){
+                $id = Convert::raw2att(str_replace(' ','_',$TrackingID));
+                $attr .= " id='$id' ";
+            }
+            if(isset($siteConfig->GoogleAnaltyicsID)){
+                $track = Convert::raw2att($TrackingID);
+                $attr .= " data-ga-label='$track' ";
+            }
+        }
+        return $attr;
+    }
 }
