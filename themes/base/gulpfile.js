@@ -28,8 +28,7 @@ gulp.task('style', function() {
         config_file: './config.rb',
         css: 'css',
         sass: path.styles
-    }))
-    .pipe(notify({ message: 'Compiled <%= file.relative %> style.' }));
+    }));
 });
 
 // Concatenate & Minify JS
@@ -47,8 +46,7 @@ gulp.task('script', function() {
 gulp.task('template', function() {
     // Copy SS files and leave them in there original stat
     gulp_theme(path.templates, 'dev', 'ss')
-    .pipe(gulp.dest('templates'))
-    .pipe(notify({ message: 'Compiled <%= file.relative %> template.' }));
+    .pipe(gulp.dest('templates'));
 
     // Minify SS files
     gulp_theme(path.templates, 'src', 'ss')
@@ -59,8 +57,7 @@ gulp.task('template', function() {
         minifyCSS: true,
         removeComments: true
     }))
-    .pipe(gulp.dest('templates'))
-    .pipe(notify({ message: 'Compiled <%= file.relative %> template.' }));
+    .pipe(gulp.dest('templates'));
 });
 
 // Watch
