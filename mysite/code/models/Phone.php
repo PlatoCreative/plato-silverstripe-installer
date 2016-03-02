@@ -38,7 +38,7 @@ class Phone extends Dataobject
      * CMS Fields
      * @return FieldList
      */
-    function getCMSFields()
+    public function getCMSFields()
     {
         $fields = parent::getCMSFields();
         $fields->addFieldsToTab(
@@ -64,7 +64,7 @@ class Phone extends Dataobject
         return $fields;
     }
 
-    function getTitle()
+    public function getTitle()
     {
         if (!$this->Label){
             return $this->Type.": ".$this->Number;
@@ -72,7 +72,7 @@ class Phone extends Dataobject
         return $this->Label;
     }
 
-    function getIcon()
+    public function getIcon()
     {
         switch ($this->Type) {
             case 'Mobile':

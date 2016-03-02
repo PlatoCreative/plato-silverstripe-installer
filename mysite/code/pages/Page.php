@@ -29,7 +29,7 @@ class Page extends SiteTree
      * CMS Fields
      * @return FieldList
      */
-    function getCMSFields()
+    public function getCMSFields()
     {
         $fields = parent::getCMSFields();
         return $fields;

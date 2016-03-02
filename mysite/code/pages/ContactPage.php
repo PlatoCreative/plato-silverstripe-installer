@@ -19,7 +19,7 @@ class ContactPage extends UserDefinedForm
         )
     );
 
-    function getCMSFields() {
+    public function getCMSFields() {
         $fields = parent::getCMSFields();
 
         // Main Tab

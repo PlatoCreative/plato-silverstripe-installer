@@ -29,7 +29,7 @@ class HomePage extends Page
      * CMS Fields
      * @return FieldList
      */
-    function getCMSFields()
+    public function getCMSFields()
     {
         $fields = parent::getCMSFields();
         return $fields;
