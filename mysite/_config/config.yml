@@ -8,6 +8,7 @@ i18n:
 Database:
   name: default
 SSViewer:
+  theme_enabled: true
   theme: default
 SiteConfig:
   extensions:
