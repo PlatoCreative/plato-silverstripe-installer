@@ -34,13 +34,11 @@ gulp.task('style', function() {
 // Concatenate & Minify JS
 gulp.task('script', function() {
     gulp_theme(path.scripts, 'dev', 'js')
-    .pipe(gulp.dest('js'))
-    .pipe(notify({ message: 'Compiled <%= file.relative %> script.' }));
+    .pipe(gulp.dest('js'));
 
     gulp_theme(path.scripts, 'src', 'js')
     .pipe(uglify())
-    .pipe(gulp.dest('js'))
-    .pipe(notify({ message: 'Compiled <%= file.relative %> script.' }));
+    .pipe(gulp.dest('js'));
 });
 
 gulp.task('template', function() {
