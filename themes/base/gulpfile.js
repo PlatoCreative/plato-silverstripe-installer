@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     compass = require('gulp-compass'),
     uglify = require('gulp-uglify'),
-    htmlmin = require('gulp-htmlmin');
+    htmlmin = require('gulp-htmlmin'),
+    watch = require('gulp-watch');
 
 /*-------------------------------------------------------------------
     Configuration
@@ -23,12 +24,22 @@ path = {
 -------------------------------------------------------------------*/
 // Compile sass into CSS
 gulp.task('style', function() {
-    gulp_theme(path.scripts, 'src', 'scss')
-    .pipe(compass({
-        config_file: './config.rb',
-        css: 'css',
-        sass: path.styles
-    }));
+    gulp.src('./'+path+'/**/*.scss')
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        .pipe(rename(function(path) {
+            path.basename = path.basename.replace('.'+type, '')
+        }))
+        .pipe(compass({
+            config_file: './config.rb',
+            css: 'css',
+            sass: path.styles
+        }));
+});
+
+// Watch sass
+gulp.task('watch-style', function() {
+    // Watch .scss files
+    gulp.watch(path.styles+'/**/*.scss', ['style']);
 });
 
 // Concatenate & Minify JS
@@ -58,24 +69,14 @@ gulp.task('template', function() {
     .pipe(gulp.dest('templates'));
 });
 
-// Watch
-gulp.task('watch', function() {
-    // Watch .scss files
-    gulp.watch(path.styles+'/**/*.scss', ['style']);
-
-    // Watch .js files
-    gulp.watch(path.scripts+'/**/*.js', ['script']);
-
-    // Watch .sss files
-    gulp.watch(path.templates+'/**/*.ss', ['template']);
-});
-
-gulp.task('default', ['style', 'script', 'template', 'watch']);
+gulp.task('default', ['style', 'watch-style', 'script', 'template']);
 
 function gulp_theme(path, type, extension){
     return gulp.src('./'+path+'/**/*.'+type+'.'+extension)
-    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(rename(function(path) {
-        path.basename = path.basename.replace('.'+type, '')
-    }));
+        .pipe(watch('./'+path+'/**/*.'+type+'.'+extension))
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        .pipe(rename(function(path) {
+            path.basename = path.basename.replace('.'+type, '')
+        })
+    );
 }
