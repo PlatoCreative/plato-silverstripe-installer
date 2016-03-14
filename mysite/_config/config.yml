@@ -26,6 +26,13 @@ StringField:
 Link:
   extensions:
     - CustomLink
+# Mailgun integration
+SmtpMailer:
+  host: smtp.mailgun.org
+  user: 
+  password:
+  tls: true
+  charset: UTF-8
 # Base install modules config
 Page:
   BannerLayout: 1

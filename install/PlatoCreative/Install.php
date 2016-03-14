@@ -103,6 +103,14 @@ class Install
             $config['Database']['name'] = $DefaultDatebaseName;
         }
 
+        // Update Mailgun settings
+        if ($MailgunUsername = $io->ask("Enter your mailgun SMTP username: ")) {
+            $config['SmtpMailer']['user'] = $MailgunUsername;
+        }
+        if ($MailgunPassword = $io->ask("Enter your mailgun SMTP password: ")) {
+            $config['SmtpMailer']['password'] = $MailgunPassword;
+        }
+
         // apply configuration to yaml
         $yaml = Spyc::YAMLDump($config);
         if(!file_put_contents($configPath, $yaml)){

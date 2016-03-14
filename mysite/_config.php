@@ -21,6 +21,11 @@ if (Director::isDev()) {
   error_reporting(E_ALL | E_STRICT);
 
   SS_Log::add_writer(new SS_LogFileWriter(dirname(__FILE__).'/errors.log'));
+
+  // Use Mailgun to send all emails while in DEV mode
+  // When in LIVE/TEST mode all emails will be sent via the default Mail class.
+  Email::set_mailer( new SmtpMailer() );
+
   // SSViewer::flush_template_cache();
   // Email::send_all_emails_to('?@platocreative.co.nz');
 }

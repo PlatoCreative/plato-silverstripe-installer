@@ -42,7 +42,8 @@
     "mediabeast/flat-admin": "3.2.*",
     "studiobonito/silverstripe-spamprotection-honeypot" : "dev-master",
     "bummzack/sortablefile" : "dev-master",
-    "mediabeast/fancy-devbuild": "1.*"
+    "mediabeast/fancy-devbuild": "1.*",
+    "markguinn/silverstripe-email-helpers": "1.2.*"
   },
   "require-dev": {
     "phpunit/PHPUnit": "~3.7"
