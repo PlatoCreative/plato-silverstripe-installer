@@ -29,8 +29,7 @@ class Page_Controller extends ContentController
             'thirdparty/jquery/dist/jquery.min.js',
             'thirdparty/foundation-sites/dist/foundation.min.js',
             'thirdparty/jquery-cycle2/build/jquery.cycle2.min.js',
-            'thirdparty/jquery-cycle2/build/plugin/jquery.cycle2.swipe.min.js',
-            $this->ThemeDir().'/js/app.js'
+            'thirdparty/jquery-cycle2/build/plugin/jquery.cycle2.swipe.min.js'
         );
 
         if(class_exists('GalleryItem')) {
