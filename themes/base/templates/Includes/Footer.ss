@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="row">
-        <div class="large-4 medium-6 column">
+        <div class="medium-6 large-4 column">
             <% include Phone Numbers=$SiteConfig.Phones %>
             <ul>                
                 <% with SiteConfig %>
@@ -9,8 +9,8 @@
                 <% end_with %>
             </ul>
         </div>
-        <div class="large-4 medium-6 column">
-            <ul class="text-center medium-only-text-right small-only-text-left">
+        <div class="medium-6 large-4 column">
+            <ul class="text-center small-only-text-left medium-only-text-right">
                 <% with SiteConfig %>
                 <% if FacebookURL %><li><a href="{$FacebookURL}" target="_blank"><i class="fa fa-facebook fa-fw"></i> Facebook</a></li><% end_if %>
                 <% if TwitterURL %><li><a href="{$TwitterURL}" target="_blank"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li><% end_if %>
@@ -22,12 +22,10 @@
             </ul>
         </div>
     </div>
-</footer>
-<footer class="footer contentInfo" role="contentInfo">
-    <div class="row">
+    <div class="row contentInfo" role="contentInfo">
         <div class="text-center column">
             <small class="copyright" rel="license">&copy; Copyright $SiteConfig.Title $Now.Year</small>
-            <small class="createdBy">Website design by <a href="http://platocreative.co.nz" target="_blank">Plato Creative</a></small>
+            <small class="createdBy">Website design by <a href="http://www.platocreative.co.nz" target="_blank">Plato Creative</a></small>
         </div>
     </div>
 </footer>
