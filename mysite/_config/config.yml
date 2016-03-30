@@ -9,6 +9,8 @@ Database:
   name: default
 SSViewer:
   theme: default
+GDBackend:
+  default_quality: 90
 SiteConfig:
   extensions:
     0: CustomSiteConfig
