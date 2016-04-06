@@ -12,17 +12,25 @@ class ContactSubmission extends DataObject
      * @var array
      */
     private static $db = array(
-        'PageId' => 'Int',
         'Name' => 'Text',
-        'Email' => 'Text',
-        'Phone' => 'Text',
+        'Email' => 'Varchar(250)',
+        'Phone' => 'Varchar(20)',
         'Enquiry' => 'Text'
+    );
+
+    /**
+     * Has_one relationship
+     * @var array
+     */
+    private static $has_one = array(
+        'Page' => 'SiteTree'
     );
 
     private static $summary_fields = array(
         'Name' => 'Name',
         'Email' => 'Email',
         'Phone' => 'Phone',
+        'Page.Title' => 'Page',
         'Created.Nice' => 'Received'
     );
 
@@ -42,8 +50,10 @@ class ContactSubmission extends DataObject
             ReadonlyField::create('Name','Name'),
             ReadonlyField::create('Email','Email address'),
             ReadonlyField::create('Phone','Phone number'),
-            TextareaField::create('Message','Enquiry Message')
-                ->setAttribute('disabled','disabled')
+            TextareaField::create('Enquiry','Enquiry Message')
+                ->setAttribute('disabled','disabled'),
+            ReadonlyField::create('ReadonlyPage', 'Enquiry from page')
+                ->setValue($this->Page()->Title)
         );
         return $fields;
     }
