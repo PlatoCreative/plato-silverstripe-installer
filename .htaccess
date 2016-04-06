@@ -34,13 +34,19 @@ ErrorDocument 500 /assets/error-500.html
   	# uncomment the following line:
 	# RewriteBase '/'
 	
+	# To redirect all users to a specific domain.
+	# (http://thisexample.com/... will be redirected to http://thatexample.com/...)
+	# uncomment the following and replace "domainname.com" with the appropriate domain.
+	# RewriteCond %{HTTP_HOST} !domainname.com$ [NC]
+	# RewriteRule ^(.*)$ http://domainname.com/$1 [L,R=301]
+	
 	# To redirect all users to access the site WITH the 'www.' prefix,
 	# (http://example.com/... will be redirected to http://www.example.com/...)
 	# uncomment the following:
 	# RewriteCond %{HTTP_HOST} .
 	# RewriteCond %{HTTP_HOST} !^www\. [NC]
 	# RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-	#
+	
 	# To redirect all users to access the site WITHOUT the 'www.' prefix,
 	# (http://www.example.com/... will be redirected to http://example.com/...)
 	# uncomment the following:
