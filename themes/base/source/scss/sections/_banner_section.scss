@@ -7,14 +7,14 @@
     margin: 0;
 }
 
-.banner-section{
-  .title{
+.banner-section {
+  .title {
     @extend h1;
     margin-top: 100px;
     color: $white;
     text-shadow: 1px 1px 4px rgba(0,0,0,1);
   }
-  .content{
+  .content {
     color: $white;
     max-width: 60%;
     text-shadow: 1px 1px 4px rgba(0,0,0,1);
