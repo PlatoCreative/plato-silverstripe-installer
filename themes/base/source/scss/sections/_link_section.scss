@@ -4,7 +4,7 @@
     display: block;
     background-color: $light-gray;
     margin-bottom: rem-calc($grid-column-gutter);
-    &:hover{
+    &:hover {
       background-color: $medium-gray;
     }
   }
@@ -22,7 +22,7 @@
     width: 100%;
   }
 
-  .contents{
+  .contents {
     padding: rem-calc($grid-column-gutter);
     color: $black;
   }
