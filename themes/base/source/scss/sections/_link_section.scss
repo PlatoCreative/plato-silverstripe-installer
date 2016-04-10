@@ -8,11 +8,9 @@
       background-color: $medium-gray;
     }
   }
-
   .title {
     @extend h5;
   }
-
   .image {
     background-position: center;
     background-repeat: no-repeat;
@@ -21,12 +19,10 @@
     height: rem-calc(150);
     width: 100%;
   }
-
   .contents {
     padding: rem-calc($grid-column-gutter);
     color: $black;
   }
-
   .more {
     @extend .button;
   }
