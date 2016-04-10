@@ -7,22 +7,22 @@
     margin: 0;
 }
 
-.image-banner-section{
-  .contents{
+.image-banner-section {
+  .contents {
     position: absolute;
     top: 0;
-    right:0;
+    right: 0;
     bottom: 0;
     left: 0;
     z-index: 150;
   }
-  .title{
+  .title {
     @extend h1;
     margin-top: 100px;
     color: $white;
     text-shadow: 1px 1px 4px rgba(0,0,0,1);
   }
-  .content{
+  .content {
     color: $white;
     max-width: 60%;
     text-shadow: 1px 1px 4px rgba(0,0,0,1);
