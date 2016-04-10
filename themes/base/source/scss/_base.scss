@@ -8,11 +8,11 @@ but they provide a useful reference and allow you to see all your
 global styles laid out at a glance.
 */
 
-*:focus{
+*:focus {
   outline: none;
 }
 
-main{
+main {
   display: block;
 }
 
@@ -171,9 +171,10 @@ dd {
 
 // --------------- tagline ---------------
 
-.siteTagline{
+.siteTagline {
 
 }
+
 // --------------- icons ---------------
 
 %icon {
@@ -213,24 +214,25 @@ tfoot {
 address {
 
 }
+
 // --------------- images ---------------
-img{
+img {
 
 }
 
 // --------------- links ---------------
 
-a{
+a {
 
 }
 
 // --------------- intro text---------------
-.intro{
+.intro {
 
 }
 
 // --------------- quote with citation ---------------
-blockquote cite{
+blockquote cite {
 
 }
 
@@ -249,7 +251,7 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   & + & {
     margin-top: $subheader-margin-top;
     margin-bottom: $subheader-margin-bottom;
