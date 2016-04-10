@@ -1,22 +1,22 @@
 img {
-  width:100%;
+  width: 100%;
 }
 .grid {
-  float:none;
-  display:block;
-  position:relative;
+  float: none;
+  display: block;
+  position: relative;
   a, img {
-    display:block;
-    width:100%;
+    display: block;
+    width: 100%;
   }
 }
 .grid li {
-  float:left;
-  list-style-type:none;
+  float: left;
+  list-style-type: none;
 }
 li.grid-item {
-  width:20%;
+  width: 20%;
 }
 li.grid-item-double {
-  width:20%;
+  width: 20%;
 }
