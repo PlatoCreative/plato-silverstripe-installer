@@ -1,37 +1,37 @@
 .link-section {
   padding: rem-calc(10 0);
-  .title{
+  .title {
     @extend h5;
     color: $dark-gray;
     margin-bottom: rem-calc(22);
   }
-  .preview{
+  .preview {
     border-bottom: rem-calc(1) solid $medium-gray;
     background-color: $white;
     display: block;
     margin-bottom: rem-calc(30);
     padding-bottom: rem-calc(30);
-    &:after{
+    &:after {
       content: "";
       display: block;
       clear: both;
     }
-    .image{
+    .image {
       height: rem-calc(315);
       background-size: cover;
       background-position: center;
     }
-    .title{
+    .title {
       @extend h4;
       color: $black;
     }
-    .content{
+    .content {
       color: $dark-gray;
     }
-    .contents{
+    .contents {
       padding: rem-calc(35);
     }
-    .more{
+    .more {
       @extend .button;
     }
   }
