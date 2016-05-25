@@ -10,8 +10,8 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[{*.scss,*.yml,*.json}]
+[{*.yml,*.json}]
 indent_size = 2
 
-[{*.css,*.html,*.ss,*.rb,*.htaccess}]
+[{*.scss,*.css,*.html,*.ss,*.rb,*.htaccess}]
 indent_style = tab
