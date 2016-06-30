@@ -6,44 +6,19 @@ After:
 i18n:
   default_locale: en_NZ
 Database:
-  name: default
+  name: ss_databasename
 SSViewer:
-  theme: default
+  theme: base
 GDBackend:
   default_quality: 90
 SiteConfig:
   extensions:
-    0: CustomSiteConfig
-    1: ContactConfig
-    2: SocialConfig
-    3: TrackingConfig
-    4: AppearanceConfig
-LeftAndMain:
-  extra_requirements_javascript:
-    - >
-      mysite/javascript/MyLeftAndMain.Preview.js
-StringField:
-  extensions:
-    - CustomText
-Link:
-  extensions:
-    - CustomLink
+    - CustomSiteConfig
+    - TrackingConfig
 # Mailgun integration
 SmtpMailer:
   host: smtp.mailgun.org
-  user: 
+  user:
   password:
   tls: true
   charset: UTF-8
-# Base install modules config
-Page:
-  BannerLayout: 1
-GalleryPage:
-  ItemLimit: 100
-  VideoAllowed: true
-HomePage:
-  SlideEffect: 'fade'
-  SlideSpeed: 500
-  SlideTimeout: 4000
-  HomeTilesLimit: 3
-  HomeTilesLayout: 2

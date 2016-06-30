@@ -1,30 +1,46 @@
 <?php
+
+/**
+ * Adds an apearance tab to site config
+ *
+ * @package silverstripe
+ * @subpackage mysite
+ */
 class TrackingConfig extends DataExtension
 {
+    /**
+     * Database fields
+     * @var array
+     */
     private static $db = array(
         'GoogleTagManager' => 'Varchar(20)',
         'GoogleAnaltyicsID' => 'Varchar(20)',
         'CrazyEgg' => 'Text'
     );
 
+    /**
+     * Update Fields
+     * @return FieldList
+     */
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldsToTab('Root.Tracking.Main', array(
-            TextField::create(
-                'GoogleTagManager',
-                'Tag manager ID'
-            )->setAttribute("placeholder", "GTM-******"),
-        ));
-        $fields->addFieldsToTab('Root.Tracking.Other', array(
-            TextareaField::create(
-                'CrazyEgg',
-                'CrazyEgg Code'
-            ),
-            TextField::create(
-                'GoogleAnaltyicsID',
-                'Analytics ID'
-            )->setAttribute("placeholder", "UA-******-*")
-        ));
+        $fields->addFieldsToTab(
+            'Root.Tracking',
+            array(
+                TextField::create(
+                    'GoogleTagManager',
+                    'Tag manager ID'
+                )->setAttribute("placeholder", "GTM-******"),
+                TextareaField::create(
+                    'CrazyEgg',
+                    'CrazyEgg Code'
+                ),
+                TextField::create(
+                    'GoogleAnaltyicsID',
+                    'Analytics ID'
+                )->setAttribute("placeholder", "UA-******-*")
+            )
+        );
         return $fields;
     }
 

@@ -7,7 +7,7 @@ class Page extends SiteTree
 
     private static $has_many = array();
 
-    function getCMSFields()
+    public function getCMSFields()
     {
         $fields = parent::getCMSFields();
         return $fields;
@@ -31,11 +31,6 @@ class Page_Controller extends ContentController
             'thirdparty/jquery-cycle2/build/jquery.cycle2.min.js',
             'thirdparty/jquery-cycle2/build/plugin/jquery.cycle2.swipe.min.js'
         );
-
-        if(class_exists('GalleryItem')) {
-            $requiredJS[] = 'thirdparty/fancybox/source/jquery.fancybox.pack.js';
-            $requiredJS[] = 'thirdparty/fancybox/source/helpers/jquery.fancybox-media.js';
-        }
 
         $requiredJS[] = $this->ThemeDir().'/js/app.js';
 

@@ -1,11 +1,8 @@
-<% include InnerBanner %>
-
 <div class="row">
-    <div class="large-6 medium-6 small-12 columns">
+    <div class="column small-12 medium-6">
         $Content
-        <% include Phone Numbers=$Phones %>
     </div>
-    <div class="large-6 medium-6 small-12 columns">
+    <div class="column small-12 medium-6">
         $Form
     </div>
 </div>
