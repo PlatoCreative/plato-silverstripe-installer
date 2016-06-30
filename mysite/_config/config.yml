@@ -21,7 +21,7 @@ StringField:
     - StringFieldExtension
 Link:
   extensions:
-    - CustomLink
+    - LinkExtension
 # Mailgun integration
 SmtpMailer:
   host: smtp.mailgun.org
