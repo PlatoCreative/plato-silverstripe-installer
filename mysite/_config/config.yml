@@ -14,10 +14,8 @@ GDBackend:
 SiteConfig:
   extensions:
     0: CustomSiteConfig
-    1: ContactConfig
-    2: SocialConfig
-    3: TrackingConfig
-    4: AppearanceConfig
+    1: TrackingConfig
+    2: AppearanceConfig
 StringField:
   extensions:
     - CustomText

@@ -1,35 +1,35 @@
 <?php
+
+/**
+ * Adds an apearance tab to site config
+ *
+ * @package silverstripe
+ * @subpackage mysite
+ */
 class AppearanceConfig extends DataExtension
 {
+    /**
+     * Database fields
+     * @var array
+     */
     private static $db = array(
         'NavgationLevel' => 'Int'
     );
 
-    private static $has_one = array(
-        'Logo' => 'Image'
-    );
-
-    private static $has_many = array();
-
+    /**
+     * Update Fields
+     * @return FieldList
+     */
     public function updateCMSFields(FieldList $fields)
 	{
         if ($themeField = $fields->fieldByName('Root.Main.Theme')) {
             $fields->removeFieldFromTab('Root.Main', 'Theme');
-            $fields->addFieldToTab('Root.Appearance.Main', $themeField);
+            $fields->addFieldToTab('Root.Appearance', $themeField);
         }
-        $fields->addFieldsToTab(
-            'Root.Appearance.Main',
-            array(
-                UploadField::create(
-                    'Logo',
-                    'Logo'
-                )->setDescription('Upload the site logo')
-            )
-        );
 
         // Navigation
         $fields->addFieldsToTab(
-            'Root.Appearance.Navigation',
+            'Root.Appearance',
             array(
                 DropdownField::create(
                     'NavgationLevel',
