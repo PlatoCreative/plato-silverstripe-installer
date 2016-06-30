@@ -12,7 +12,7 @@ class HomePage extends Page
 }
 class HomePage_Controller extends Page_Controller
 {
-    function init() {
+    public function init() {
         parent::init();
     }
 }

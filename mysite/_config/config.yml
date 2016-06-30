@@ -6,25 +6,19 @@ After:
 i18n:
   default_locale: en_NZ
 Database:
-  name: default
+  name: ss_databasename
 SSViewer:
-  theme: default
+  theme: base
 GDBackend:
   default_quality: 90
 SiteConfig:
   extensions:
+    - CustomSiteConfig
     - TrackingConfig
-    - AppearanceConfig
-StringField:
-  extensions:
-    - StringFieldExtension
-Link:
-  extensions:
-    - LinkExtension
 # Mailgun integration
 SmtpMailer:
   host: smtp.mailgun.org
-  user: 
+  user:
   password:
   tls: true
   charset: UTF-8

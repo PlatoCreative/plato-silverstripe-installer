@@ -13,15 +13,4 @@ $(document).ready(function() {
             ga('send', 'event', 'button', $action, $trackingName);
         });
     });
-
-    // standard images
-    $(".fancybox").fancybox();
-    // videos
-    $('.fancybox-media').fancybox({
-        openEffect  : 'none',
-        closeEffect : 'none',
-        helpers : {
-            media : {}
-        }
-    });
 });

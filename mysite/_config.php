@@ -29,3 +29,18 @@ if (Director::isDev()) {
   // SSViewer::flush_template_cache();
   // Email::send_all_emails_to('?@platocreative.co.nz');
 }
+
+if (Director::isTest()) {
+
+    // BasicAuth::protect_entire_site();
+
+    ini_set('display_errors', 1);
+    ini_set("log_errors", 1);
+    error_reporting(E_ALL | E_STRICT);
+
+    SS_Log::add_writer(new SS_LogFileWriter(dirname(__FILE__).'/errors.log'));
+
+    // Email::set_mailer( new SmtpMailer() );
+    //Email::send_all_emails_to('?@platocreative.co.nz');
+
+}

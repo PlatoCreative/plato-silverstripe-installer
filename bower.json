@@ -1,10 +1,8 @@
 {
-  "name": "plato-creative/plato-silverstripe-installer",
+  "name": "platocreative",
   "dependencies": {
     "foundation-sites": "6.2.1",
     "jquery": "2.2.3",
-    "jquery-cycle2": "2.1.6",
-    "modernizr": "3.2.0",
-    "fancybox": "2.1.5"
+    "jquery-cycle2": "2.1.6"
   }
 }
