@@ -18,10 +18,6 @@ SiteConfig:
     2: SocialConfig
     3: TrackingConfig
     4: AppearanceConfig
-LeftAndMain:
-  extra_requirements_javascript:
-    - >
-      mysite/javascript/MyLeftAndMain.Preview.js
 StringField:
   extensions:
     - CustomText
