@@ -1,54 +1,79 @@
 <?php
+
+/**
+ * Creates a contact page type
+ *
+ * @package silverstripe
+ * @subpackage mysite
+ */
 class ContactPage extends UserDefinedForm
 {
-
     private static $icon = 'mysite/images/contact.png';
 
+    /**
+     * Database fields
+     * @var array
+     */
     private static $db = array(
         'ExtraContent' => 'HTMLText',
         'GoogleMap' => 'Text'
     );
 
+    /**
+     * Many_many relationship
+     * @var array
+     */
     private static $many_many = array(
-        'Phones' => 'Phone'
+        'Links' => 'Link'
     );
 
+    /**
+     * {@inheritdoc }
+     * @var array
+     */
     private static $many_many_extraFields = array(
-        'Phones' => array (
+        'Links' => array(
             'Sort' => 'Int'
         )
     );
 
-    function getCMSFields() {
+    /**
+     * CMS Fields
+     * @return FieldList
+     */
+    public function getCMSFields()
+    {
         $fields = parent::getCMSFields();
 
         // Main Tab
-        $fields->addFieldsToTab('Root.Main', array(
-            HTMLEditorField::create('ExtraContent', 'Extra Content Area')
-        ), 'Metadata');
+        $fields->addFieldsToTab(
+            'Root.Main',
+            array(
+                HTMLEditorField::create('ExtraContent', 'Extra Content Area')
+            ),
+            'Metadata'
+        );
 
         $fields->addFieldsToTab(
-            'Root.Phone',
+            'Root.Links',
             array(
                 GridField::create(
-                    'Phones',
-                    'Current phone number(s)',
-                    $this->Phones(),
+                    'Links',
+                    'Link(s)',
+                    $this->Links(),
                     GridFieldConfig_RelationEditor::create()
-                        ->removeComponentsByType('GridFieldAddNewButton')
-                        // ->addComponent(new GridFieldAddExistingSearchButton())
-                        ->addComponent(new GridFieldEditableColumns())
-                        ->addComponent(new GridFieldDeleteAction())
-                        ->addComponent(new GridFieldAddNewInlineButton())
                         ->addComponent(new GridFieldOrderableRows())
                 )
             )
         );
 
         // Google Map
-	    $fields->addFieldsToTab('Root.GoogleMap', array(
-    		TextField::create('GoogleMap', 'Google Map URL')
-    	));
+        $fields->addFieldsToTab(
+            'Root.GoogleMap',
+            array(
+                TextField::create('GoogleMap', 'Google Map URL')
+            )
+        );
 
         return $fields;
     }
@@ -59,11 +84,8 @@ class ContactPage extends UserDefinedForm
        return $ll ? ArrayData::create(array('Latitude' => $matches[1], 'Longitude' => $matches[2], 'Nice' => $matches[1] . ',' . $matches[2])) : null;
     }
 }
-
 class ContactPage_Controller extends UserDefinedForm_Controller
 {
-    private static $allowed_actions = array ();
-
     public function init() {
         parent::init();
     }
