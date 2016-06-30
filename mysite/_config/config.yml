@@ -13,9 +13,8 @@ GDBackend:
   default_quality: 90
 SiteConfig:
   extensions:
-    0: CustomSiteConfig
-    1: TrackingConfig
-    2: AppearanceConfig
+    - TrackingConfig
+    - AppearanceConfig
 StringField:
   extensions:
     - StringFieldExtension
