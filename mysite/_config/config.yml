@@ -18,7 +18,7 @@ SiteConfig:
     2: AppearanceConfig
 StringField:
   extensions:
-    - CustomText
+    - StringFieldExtension
 Link:
   extensions:
     - CustomLink
