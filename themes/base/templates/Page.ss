@@ -8,8 +8,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     $MetaTags(false)
 
-    <link rel="shortcut icon" href="$ThemeDir/images/favicon.ico" />
-
     <% require themedCSS('app') %>
 
     <%-- FontAwesome --%>
