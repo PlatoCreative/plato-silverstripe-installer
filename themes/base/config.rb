@@ -15,11 +15,12 @@ on_stylesheet_saved do |file|
     result = AutoprefixerRails.process(css,
       from: file,
       to:   file,
-      map:  { prev: File.read(map), inline: false })
+      map:  { prev: File.read(map), inline: false },
+	  browsers: ['> 1%', 'IE > 8'])
     File.open(file, 'w') { |io| io << result.css }
     File.open(map,  'w') { |io| io << result.map }
   else
-    File.open(file, 'w') { |io| io << AutoprefixerRails.process(css) }
+    File.open(file, 'w') { |io| io << AutoprefixerRails.process(css, browsers: ['> 1%', 'IE > 8']) }
   end
 end
 
