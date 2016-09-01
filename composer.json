@@ -37,7 +37,8 @@
     "jonom/focuspoint": "2.*",
     "sheadawson/silverstripe-linkable": "1.*",
     "bummzack/sortablefile" : "1.*",
-    "markguinn/silverstripe-email-helpers": "1.2.*"
+    "markguinn/silverstripe-email-helpers": "1.2.*",
+    "plato-creative/silverstripe-styleguide": "1.*"
   },
   "require-dev": {
     "phpunit/PHPUnit": "~3.7"
