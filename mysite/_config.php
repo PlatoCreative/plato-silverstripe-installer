@@ -44,3 +44,6 @@ if (Director::isTest()) {
     //Email::send_all_emails_to('?@platocreative.co.nz');
 
 }
+
+// Remove extra buttons from editor
+HtmlEditorConfig::get('cms')->removeButtons('selectall', 'visualaid', 'strikethrough', 'pasteword', 'cut', 'copy', 'paste');
