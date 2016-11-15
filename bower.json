@@ -1,8 +1,0 @@
-{
-  "name": "platocreative",
-  "dependencies": {
-    "foundation-sites": "6.2.3",
-    "jquery": "2.2.3",
-    "jquery-cycle2": "2.1.6"
-  }
-}

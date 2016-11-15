@@ -43,14 +43,6 @@
   "require-dev": {
     "phpunit/PHPUnit": "~3.7"
   },
-  "scripts": {
-    "post-install-cmd": [
-      "bower install"
-    ],
-    "post-update-cmd": [
-      "bower install"
-    ]
-  },
   "prefer-stable": true,
   "minimum-stability": "dev"
 }

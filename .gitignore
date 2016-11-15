@@ -6,6 +6,8 @@
 !/mysite/*
 !/themes
 !/themes/*
+!/myresources
+!/myresources/*
 !/composer.json
 !/composer.lock
 !/bower.json
@@ -13,6 +15,9 @@
 !/README.md
 !/LICENSE*
 !/phpunit.xml
+!/gulpfile.js
+!/package.json
+!/webpack.config.js
 *Thumbs.db
 *web.config
 *.log
