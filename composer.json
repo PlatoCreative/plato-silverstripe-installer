@@ -14,12 +14,6 @@
       "email": "gorriecoe@gmail.com"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@github.com:PlatoCreative/plato-genericlogin.git"
-    }
-  ],
   "require": {
     "php": ">=5.3.3",
     "silverstripe/cms": "3.4.*",
@@ -30,7 +24,7 @@
     "plato-creative/plato-welcome": "dev-master",
     "plato-creative/plato-userforms-extensions": "dev-master",
     "plato-creative/silverstripe-typekit" : "dev-master",
-    "plato-creative/plato-genericlogin" : "3.2.*",
+    "plato-creative/plato-external-login" : "3.4.*",
     "kinglozzer/metatitle": "1.0.*",
     "unclecheese/betterbuttons": "1.2.*",
     "tractorcow/silverstripe-robots": "*@dev",
