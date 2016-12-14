@@ -1,5 +1,4 @@
-@import "compass/css3";
-@import "foundation-sites/scss/foundation";
+@import "node_modules/foundation-sites/scss/foundation";
 @import "settings";
 
 // This will create classes for everything
@@ -43,8 +42,12 @@
 // @include foundation-tooltip;
 @include foundation-top-bar;
 
-@import "mixins/*";
-@import "plugins/*";
+// Include each file in the correct order
+@import "mixins/mixins";
+@import "plugins/plugins";
 @import "base";
-@import "pages/*";
-@import "partials/*";
+@import "pages/page";
+@import "partials/header";
+@import "partials/navigation";
+@import "partials/form";
+@import "partials/footer";
