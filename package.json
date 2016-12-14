@@ -5,8 +5,8 @@
     "gulp": "^3.9.1",
     "jquery": "2.2.3",
     "jquery-fancybox": "^3.1.0",
-    "laravel-elixir": "6.0.0-11",
-    "laravel-elixir-webpack-official": "^1.0.8",
+    "laravel-elixir": "6.0.0-15",
+    "laravel-elixir-webpack-official": "^1.0.10",
     "script-loader": "^0.7.0"
   }
 }
