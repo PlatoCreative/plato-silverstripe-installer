@@ -18,6 +18,7 @@
 !/gulpfile.js
 !/package.json
 !/webpack.config.js
+!favicon.ico
 *Thumbs.db
 *web.config
 *.log
