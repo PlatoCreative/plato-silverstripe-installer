@@ -19,5 +19,6 @@ Tasks
 
 elixir(function(mix) {
     mix.sass('app.scss');
+    mix.sass('editor.scss');
     mix.webpack('app.js', elixir.config.publicPath + '/js/app.min.js');
 });
