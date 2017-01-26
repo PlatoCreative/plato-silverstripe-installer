@@ -34,6 +34,7 @@
     "markguinn/silverstripe-email-helpers": "1.2.*",
     "plato-creative/silverstripe-styleguide": "1.*",
     "undefinedoffset/silverstripe-nocaptcha": "0.2.*",
+    "tractorcow/silverstripe-dynamiccache": "4.1.*",
   },
   "require-dev": {
     "phpunit/PHPUnit": "~3.7"
