@@ -1,18 +1,29 @@
+const webpack = require('webpack');
+const path = require('path');
+
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
-    profile: false,
-    stats: {
-        hash: false,
-        version: false,
-        timings: false,
-        assets: false,
-        chunks: false,
-        modules: false,
-        reasons: false,
-        children: false,
-        source: false,
-        errors: false,
-        errorDetails: false,
+  
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
+
+  devtool: isProduction ? null : 'source-map',
+
+  plugins: [
+
+    isProduction ? new webpack.optimize.UglifyJsPlugin({
+      compress: {
         warnings: false,
-        publicPath: false
-    }
+      },
+    }) : null,
+
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '\'' + process.env.NODE_ENV + '\'',
+      },
+    }),
+
+  ].filter(plugin => plugin),
 };
