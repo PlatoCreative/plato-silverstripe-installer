@@ -1,9 +1,8 @@
 
 // Require jQuery
-window.$ = window.jQuery = require('jquery/dist/jquery.min.js');
-
+window.$ = window.jQuery = require('jquery/dist/jquery.js');
 // Require Foundation
-require('foundation-sites/dist/foundation.min.js');
+require('foundation-sites');
 
 (function($) {
 
