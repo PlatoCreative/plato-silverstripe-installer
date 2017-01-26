@@ -1,6 +1,6 @@
 {
   "private": true,
-  "devDependencies": {
+  "dependencies": {
     "foundation-sites": "6.2.*",
     "gulp": "^3.9.1",
     "jquery": "2.2.3",
