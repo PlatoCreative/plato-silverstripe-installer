@@ -1,0 +1,14 @@
+DynamicCache:
+# configuration
+  enabled: false
+  cacheDir: 'dynamic_cache'
+  cacheDuration: 604800
+  ignoredPages:
+    - UserDefinedForm
+# add caching to objects
+CustomSiteConfig:
+  extensions:
+    - DynamicCacheDataObjectExtension
+TrackingConfig:
+  extensions:
+    - DynamicCacheDataObjectExtension
