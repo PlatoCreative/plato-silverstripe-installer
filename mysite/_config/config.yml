@@ -15,6 +15,8 @@ SiteConfig:
   extensions:
     - CustomSiteConfig
     - TrackingConfig
+UserDefinedForm_EmailRecipient:
+  allow_unbound_recipient_fields: true
 # Mailgun integration
 SmtpMailer:
   host: smtp.mailgun.org
