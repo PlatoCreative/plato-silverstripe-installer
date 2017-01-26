@@ -1,7 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "foundation-sites": "6.2.*",
+    "foundation-sites": "6.3.*",
     "gulp": "^3.9.1",
     "jquery": "2.2.3",
     "jquery-fancybox": "^3.1.0",
