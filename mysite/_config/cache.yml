@@ -6,9 +6,6 @@ DynamicCache:
   ignoredPages:
     - UserDefinedForm
 # add caching to objects
-CustomSiteConfig:
-  extensions:
-    - DynamicCacheDataObjectExtension
-TrackingConfig:
+SiteConfig:
   extensions:
     - DynamicCacheDataObjectExtension
