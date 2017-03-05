@@ -1,0 +1,54 @@
+options:
+  formatter: stylish
+  merge-default-rules: false
+rules:
+  # Warnings
+  # Things that require actual refactoring are marked as warnings
+  class-name-format:
+    - 1
+    - convention: hyphenatedlowercase
+  placeholder-name-format:
+    - 1
+    - convention: hyphenatedlowercase
+  variable-name-format:
+    - 1
+    - allow-leading-underscore: true
+      convention: hyphenatedlowercase
+  nesting-depth:
+    - 1
+    - max-depth: 4
+  no-ids: 1
+  no-important: 1
+  extends-before-mixins: 1
+  extends-before-declarations: 1
+  declarations-before-nesting: 1
+  one-declaration-per-line: 1
+
+  # Warnings: these things are preferential rather than mandatory
+  no-css-comments: 1
+
+  # Errors
+  # Things that can be easily fixed are marked as errors
+  indentation:
+    - 2
+    - size: 'tab'
+  final-newline:
+    - 2
+    - include: true
+  no-trailing-whitespace: 2
+  border-zero:
+    - 2
+    - convention: '0'
+  brace-style:
+    - 2
+    - allow-single-line: true
+  clean-import-paths:
+    - 2
+    - filename-extension: false
+      leading-underscore: false
+  no-debug: 2
+  no-empty-rulesets: 2
+  no-invalid-hex: 2
+  no-mergeable-selectors: 2
+  no-trailing-zero: 2
+  no-url-protocols: 2
