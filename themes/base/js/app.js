@@ -1,26 +1,51 @@
-
-// Require jQuery
-window.$ = window.jQuery = require('jquery/dist/jquery.js');
-// Require Foundation
+/**
+ * Load Plugins
+ * If you don't see a plugin below it might be autloaded via webpack
+ * Check webpack.mix.js for autoloaded plugins.
+ */
 require('foundation-sites');
+require('jquery-match-height');
 
-(function($) {
 
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+let token = document.head.querySelector('meta[name="csrf-token"]');
+if (token) {
+    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+
+/**
+ *
+ * Application script
+ *
+ */
+$(function() {
+
+    // init Foundation
     $(document).foundation();
 
-    $(document).ready(function() {
-        // google analytics
-        $('[data-ga-label]').each(function(){
-            $(this).on('click', function() {
-                var $trackingName = $(this).data('ga-label'),
-                $tagName = $(this).prop("tagName"),
-                $action = 'click';
-                if($tagName=='input'){
-                    $action = 'submit';
-                }
-                ga('send', 'event', 'button', $action, $trackingName);
-            });
+    // google analytics
+    $('[data-ga-label]').each(function(){
+        $(this).on('click', function() {
+            var $trackingName = $(this).data('ga-label'),
+            $tagName = $(this).prop("tagName"),
+            $action = 'click';
+            if($tagName=='input'){
+                $action = 'submit';
+            }
+            ga('send', 'event', 'button', $action, $trackingName);
         });
     });
 
-}(jQuery));
+});

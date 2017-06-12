@@ -17,7 +17,7 @@
 !/phpunit.xml
 !/gulpfile.js
 !/package.json
-!/webpack.config.js
+!/webpack.mix.js
 !favicon.ico
 *Thumbs.db
 *web.config
@@ -32,3 +32,4 @@
 *.sublime-*
 *.sass-cache
 *prepros.cfg
+*mix-manifest.json

@@ -24,3 +24,6 @@ SmtpMailer:
   password:
   tls: true
   charset: UTF-8
+LeftAndMain:
+  cms_menu_color: '#ffffff'
+  cms_menu_background: '#000000'
