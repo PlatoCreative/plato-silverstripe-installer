@@ -22,6 +22,8 @@ class Page_Controller extends ContentController
         parent::init();
 
         Requirements::set_force_js_to_bottom(true);
+        Requirements::javascript($this->ThemeDir().'/js/manifest.js');
+        Requirements::javascript($this->ThemeDir().'/js/vendor.js');
         Requirements::javascript($this->ThemeDir().'/js/app.min.js');
 
         // Requirements::customScript();
