@@ -1,6 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
+	<% if SiteConfig.GoogleTagManager %>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','$SiteConfig.GoogleTagManager');</script>
+		<!-- End Google Tag Manager -->
+	<% end_if %>
     <% base_tag %>
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
     <meta charset="utf-8">
@@ -21,7 +30,7 @@
     <% include GoogleAnalytics trackingId=$SiteConfig.GoogleAnaltyicsID %>
 </head>
 <body class="$ClassName">
-    <% include GoogleTagManager trackingId=$SiteConfig.GoogleTagManager %>
+    <% include GoogleTagManager %>
     <% include Header %>
     $Layout
     <% include Footer %>
