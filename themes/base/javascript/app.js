@@ -3,9 +3,10 @@
  * If you don't see a plugin below it might be autloaded via webpack
  * Check webpack.mix.js for autoloaded plugins.
  */
-require('foundation-sites');
 require('jquery-match-height');
 
+import { Foundation } from './foundation';
+Foundation.addToJquery(jQuery);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -31,21 +32,6 @@ if (token) {
  *
  */
 $(function() {
-
     // init Foundation
     $(document).foundation();
-
-    // google analytics
-    $('[data-ga-label]').each(function(){
-        $(this).on('click', function() {
-            var $trackingName = $(this).data('ga-label'),
-            $tagName = $(this).prop("tagName"),
-            $action = 'click';
-            if($tagName=='input'){
-                $action = 'submit';
-            }
-            ga('send', 'event', 'button', $action, $trackingName);
-        });
-    });
-
 });
