@@ -12,10 +12,13 @@
   },
   "devDependencies": {
     "axios": "^0.16.2",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
     "cross-env": "^3.2.3",
-    "foundation-sites": "6.3.*",
-    "jquery": "2.2.3",
+    "foundation-sites": "^6.4.0",
+    "jquery": "^2.2.3",
     "jquery-match-height": "^0.7.2",
-    "laravel-mix": "1.0.*"
+    "laravel-mix": "1.0.*",
+    "webpack": "^3.5.6"
   }
 }
