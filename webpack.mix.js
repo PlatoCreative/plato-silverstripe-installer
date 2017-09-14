@@ -8,30 +8,28 @@ Tasks
 -------------------------------------------------------------------*/
 
 // javascript
-mix.webpackConfig({
+mix.js(
+    'themes/base/javascript/app.js',
+    'themes/base/javascript/app.min.js'
+).webpackConfig({
     module: {
         rules: [
-                {
-                    test: /\.jsx?$/,
-                    use: [
-                        {
-                            loader: 'babel-loader',
-                            options: Config.babel()
-                        }
-                    ]
-                }
-            ]
-        }
-    })
-    .autoload({
-        'jquery': ['$', 'jQuery', 'window.jQuery'],
-        'axios': ['window.axios']
-    })
-    .js(
-        'themes/base/javascript/app.js',
-        'themes/base/javascript/app.min.js'
-    )
-    .extract(['jquery']);
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules(?!\/foundation-sites)|bower_components/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: Config.babel()
+                    }
+                ]
+            }
+        ]
+    }
+}).autoload({
+    'jquery': ['$', 'jQuery', 'window.jQuery'],
+    'axios': ['window.axios']
+});
 
 // scss
 mix.sass(

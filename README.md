@@ -5,7 +5,6 @@ A custom installer for a SilverStripe based project, includes commonly used file
 This installer requires you have the following:
 - Composer
 - NPM/nodeJS
-- Gulp
 
 ### Installation ###
 1. Use composer to quickly create a new project:
@@ -18,14 +17,13 @@ npm install
 ```
 3. Compile SCSS & Javascript
 ```
-gulp --production
+npm run prod
 ```
 
-### Gulp Tips ###
+### Compiling Tips ###
 There are 3 default commands you can run:
-1. `gulp` - this will simply compile all scripts (without compression)
-2. `gulp watch` - this will compile like above but keep watching for changes
-3. `gulp --production` OR `gulp watch --production` - this will compile all files with compression and all sorts or other goodies.
+2. `npm run watch` - this will compile like above but keep watching for changes.
+3. `npm run prod` - this will compile all files with compression and all sorts or other goodies. And exclude and logs.
 
 #### Tests via PHPUnit ####
 To run PHPUnit and tests use:

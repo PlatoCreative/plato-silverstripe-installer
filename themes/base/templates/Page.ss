@@ -19,19 +19,22 @@
     $MetaTags(false)
 
     <%-- FontAwesome --%>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <%-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> --%>
 
     <% if SiteConfig.TypeKitID %>{$TypeKit}<% end_if %>
 
     <%-- REMOVE BEFORE WEBSITE GOES LIVE --%>
     <% if not IsLive %><meta name="robots" content="noindex, nofollow"><% end_if %>
+	<%-- Google analytics --%>
     <% include GoogleAnalytics trackingId=$SiteConfig.GoogleAnaltyicsID %>
 </head>
 <body class="$ClassName">
+	<%-- Google Tag Manager --%>
     <% include GoogleTagManager %>
     <% include Header %>
     $Layout
     <% include Footer %>
+	<%-- Crazy Egg if enabled --%>
     <% include CrazyEgg trackingId=$SiteConfig.CrazyEgg %>
 </body>
 </html>
