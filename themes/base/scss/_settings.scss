@@ -66,8 +66,8 @@
 // ---------
 
 // Grid Settings
-$xy-grid: false;
-$global-flexbox: false;
+$xy-grid: true;
+$global-flexbox: true;
 
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
