@@ -15,6 +15,9 @@ SiteConfig:
   extensions:
     - CustomSiteConfig
     - TrackingConfig
+StringField:
+  extensions:
+    - CustomText
 UserDefinedForm_EmailRecipient:
   allow_unbound_recipient_fields: true
 # Mailgun integration
