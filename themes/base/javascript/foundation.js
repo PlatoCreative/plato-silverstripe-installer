@@ -24,6 +24,18 @@ import { OffCanvas } from 'foundation-sites/js/foundation.offcanvas';
 // import { Toggler } from 'foundation-sites/js/foundation.toggler';
 // import { Tooltip } from 'foundation-sites/js/foundation.tooltip';
 // import { ResponsiveAccordionTabs } from 'foundation-sites/js/foundation.responsiveAccordionTabs';
+// ### Utilities
+// import { rtl, GetYoDigits, transitionend } from 'foundation-sites/js/foundation.util.core'
+// import { Box } from 'foundation-sites/js/foundation.util.box'
+// import { onImagesLoaded } from 'foundation-sites/js/foundation.util.imageLoader';
+// import { Keyboard } from 'foundation-sites/js/foundation.util.keyboard';
+// import { MediaQuery } from 'foundation-sites/js/foundation.util.mediaQuery';
+// import { Motion, Move } from 'foundation-sites/js/foundation.util.motion';
+// import { Nest } from 'foundation-sites/js/foundation.util.nest';
+// import { Timer } from 'foundation-sites/js/foundation.util.timer';
+// import { Touch } from 'foundation-sites/js/foundation.util.touch';
+// import { Triggers } from 'foundation-sites/js/foundation.util.triggers';
+
 
 // ### Include plugins
 Foundation.plugin(Dropdown, 'Dropdown');
@@ -47,5 +59,16 @@ Foundation.plugin(OffCanvas, 'OffCanvas');
 // Foundation.plugin(Toggler, 'Toggler');
 // Foundation.plugin(Tooltip, 'Tooltip');
 // Foundation.plugin(ResponsiveAccordionTabs, 'ResponsiveAccordionTabs');
+// ### Init Utilities
+// Foundation.Box = Box;
+// Foundation.onImagesLoaded = onImagesLoaded;
+// Foundation.Keyboard = Keyboard;
+// Foundation.MediaQuery = MediaQuery;
+// Foundation.Motion = Motion;
+// Foundation.Move = Move;
+// Foundation.Nest = Nest;
+// Foundation.Timer = Timer;
+// Touch.init($);
+// Triggers.init($, Foundation);
 
 export { Foundation };
