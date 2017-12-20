@@ -17,7 +17,7 @@
     "silverstripe/googlesitemaps": "1.*",
     "silverstripe/userforms": "^4.2",
     "silverstripe-australia/gridfieldextensions": "1.3.0",
-    "plato-creative/plato-welcome": "dev-master",
+    "plato-creative/plato-welcome": "3.2.*",
     "plato-creative/plato-userforms-extensions": "dev-master",
     "plato-creative/silverstripe-typekit" : "dev-master",
     "plato-creative/plato-external-login" : "3.4.*",
